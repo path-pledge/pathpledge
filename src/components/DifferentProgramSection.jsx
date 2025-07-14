@@ -4,8 +4,8 @@ import programImage from "../assets/11.jpg"; // Replace with actual image path
 
 const DifferentProgramSection = () => {
   return (
-    <section className="bg-black text-white min-h-screen flex items-center justify-center py-12 px-2">
-      <div className="max-w-7xl w-full">
+    <section className="bg-black text-white py-16 px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-12 overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto">
         {/* Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -30,13 +30,13 @@ const DifferentProgramSection = () => {
         </motion.p>
 
         {/* Content Row */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Text Section */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="space-y-5 px-2 md:px-6"
+            className="space-y-5 px-2 md:px-6 max-w-xl mx-auto"
           >
             <h3 className="font-extrabold text-2xl md:text-3xl">
               What Sets It Apart?
@@ -63,7 +63,7 @@ const DifferentProgramSection = () => {
             initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex justify-center"
+            className="flex justify-center px-4 md:px-0"
           >
             <img
               src={programImage}

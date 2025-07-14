@@ -26,31 +26,38 @@ const plans = [
 
 const PlanSection = () => {
   return (
-    <div className="bg-gray-100 text-black p-8 rounded-2xl">
-      <h2 className="text-5xl font-bold  space-y-6 mb-4 text-center sm:text-left">
-        Choose your plan
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        {plans.map((plan, index) => (
-          <a
-            key={index}
-            href={plan.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-gray-100 text-[#D9070A] rounded-xl p-4 flex flex-col justify-between shadow-sm hover:shadow-2xl hover:-translate-y-1 transition transform cursor-pointer"
-          >
-            <div>
-              <h3 className="text-lg font-bold">{plan.title}</h3>
-              <p className="text-md font-bold mt-1">{plan.price}</p>
-              <p className="text-gray-600 text-sm mt-2">{plan.description}</p>
-            </div>
-            <div className="flex justify-end mt-3">
-              <span className="text-gray-900 font-extrabold text-xl">→</span>
-            </div>
-          </a>
-        ))}
+    <section className="bg-gray-100 py-12 px-6 sm:px-12 rounded-2xl">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-center sm:text-left mb-12">
+          Choose your plan
+        </h2>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {plans.map((plan, index) => (
+            <a
+              key={index}
+              href={plan.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white text-[#D9070A] p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-1">{plan.title}</h3>
+                <p className="text-lg font-semibold mb-4">{plan.price}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {plan.description}
+                </p>
+              </div>
+              <div className="flex justify-end mt-6">
+                <span className="text-xl font-bold text-gray-800 group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

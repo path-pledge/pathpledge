@@ -12,7 +12,7 @@ const PathPledgeIntro = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-20 px-6 sm:px-8 lg:px-10 relative overflow-hidden">
+    <section className="bg-gray-100 py-20 px-6 sm:px-6 lg:px-10 relative overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
         
         {/* Text Section */}

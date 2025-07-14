@@ -26,10 +26,9 @@ export const OffshoreStaffSection = () => {
             Who We Are
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 leading-tight text-left md:text-left">
-            At PathPledge,<br />
-            we go beyond education,<br />
-            we build elite, data-driven market minds.
+          <h2 className="text-3xl  md:text-5xl font-extrabold text-gray-800 leading-tight text-center md:text-left">
+            At PathPledge, we go beyond education,<br />
+            we build elite, data driven market minds.
           </h2>
 
           {/* 📱 Mobile-only Video BELOW h2 */}

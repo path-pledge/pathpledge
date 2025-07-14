@@ -3,7 +3,7 @@ import PricingPage from '../../components/PricingPage'
 import PremiumOfferSection from '../../components/PremiumOfferSection'
 import InformationSection from '../../components/InformationSection'
 import PlanSection from '../../components/PlanSection'
-import InquirySection from '../../components/InquirySection'
+import ContactSection from '../../components/ContactSection'
 
 const Pricing = () => {
   return (
@@ -14,7 +14,8 @@ const Pricing = () => {
     <PlanSection />
     <PremiumOfferSection />
     <InformationSection />
-     <InquirySection />
+    <ContactSection />
+    
    </div>
   )
 }

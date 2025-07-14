@@ -4,7 +4,7 @@ import heroImage from "../assets/8.jpg";
 
 const TradingWithDataScience = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white flex items-center min-h-[85vh] md:h-[90vh]  md:mt-14">
+    <section className="relative w-full overflow-hidden bg-black text-white flex items-center min-h-[85vh] md:h-[90vh]  md:mt-14 ">
       
       {/* ✅ Image - background on small, right side on md+ */}
       <motion.img

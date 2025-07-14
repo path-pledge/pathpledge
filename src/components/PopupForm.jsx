@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
-import logoWatermark from "../assets/logo.png"; // for watermark only
+import logoWatermark from "../assets/logo.png";
+
+import { db } from "../firebase"; // adjust path if needed
+import { collection, addDoc } from "firebase/firestore";
 
 const PopupForm = () => {
   const [show, setShow] = useState(false);
@@ -21,23 +24,34 @@ const PopupForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Step 1: Save data
-    console.log("Form Data:", formData);
+    try {
+      // Step 1: Save data to Firestore
+      await addDoc(collection(db, "brochureForms"), {
+        ...formData,
+        source: "popup",
+        createdAt: new Date(),
+      });
 
-    // Step 2: Trigger brochure download
-    const brochureUrl = "/brochure.pdf"; // must be in public folder
-    const link = document.createElement("a");
-    link.href = brochureUrl;
-    link.download = "Trading_Brochure.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+      console.log("Form data saved to Firestore:", formData);
 
-    // Step 3: Close the popup
-    setShow(false);
+      // Step 2: Trigger brochure download
+      const brochureUrl = "/brochure.pdf"; // must be in public folder
+      const link = document.createElement("a");
+      link.href = brochureUrl;
+      link.download = "Trading_Brochure.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      // Step 3: Close popup
+      setShow(false);
+    } catch (error) {
+      console.error("Error saving form data:", error);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   if (!show) return null;
@@ -54,9 +68,7 @@ const PopupForm = () => {
           opacity: 1,
         }}
       >
-        {/* Overlay */}
         <div className="w-full h-full p-6 sm:p-10 bg-white/90 backdrop-blur text-gray-800 relative z-10 rounded-3xl">
-          {/* Close Button */}
           <button
             onClick={() => setShow(false)}
             className="absolute top-4 right-5 text-2xl font-bold text-gray-500 hover:text-red-500"

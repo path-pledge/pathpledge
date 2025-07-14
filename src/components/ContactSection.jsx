@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { PhoneCall, Clock3, MapPin, Mail } from "lucide-react";
 import { useLocation } from "react-router-dom";
+import { db } from "../firebase"; // adjust path as per your structure
+import { collection, addDoc } from "firebase/firestore";
 
 const ContactSection = React.forwardRef((props, ref) => {
   const [formData, setFormData] = useState({
@@ -41,26 +43,16 @@ const ContactSection = React.forwardRef((props, ref) => {
     setLoading(true);
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwQ5IfqNUAKbpjV3wWOoMcaPjkzAy8weUo6AhIOQClJZXjEcvNMti5DjCpfQSopMALuBA/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      await addDoc(collection(db, "contacts"), {
+        ...formData,
+        timestamp: new Date(),
+      });
 
-      if (!response.ok) throw new Error("Server error");
-
-      const result = await response.json();
-      console.log("Form submitted successfully:", result);
       setSubmitted(true);
       setFormData({ fullName: "", phone: "", message: "" });
       setTimeout(() => setSubmitted(false), 3000);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Firebase Error:", error);
       alert("There was an error submitting the form.");
     } finally {
       setLoading(false);

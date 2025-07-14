@@ -42,7 +42,7 @@ const DataScienceSection = () => {
             <img
               src={promoImg3}
               alt="AI-powered stock market course"
-              className="w-[90%] max-w-md md:max-w-full object-contain"
+              className="w-full max-w-md md:max-w-full object-contain"
             />
           </motion.div>
 

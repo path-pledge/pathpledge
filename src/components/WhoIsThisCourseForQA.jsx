@@ -10,8 +10,8 @@ const WhoIsThisCourseForQA = () => {
   };
 
   return (
-    <section className="bg-gray-100 text-gray-800 py-16 px-4">
-      <div className="max-w-7xl mx-auto min-h-screen">
+    <section className="bg-gray-100 text-gray-800 py-16 px-4 sm:px-6 md:px-10">
+      <div className="max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,7 +25,7 @@ const WhoIsThisCourseForQA = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="bg-[#f8f8f8] rounded-xl shadow-lg p-8 md:p-10 space-y-6"
+          className="bg-[#f8f8f8] rounded-xl shadow-lg p-6 sm:p-8 md:p-10 space-y-6"
         >
           <p className="text-black/90 text-justify text-lg">
             This course is ideal for anyone who wants to learn about trading — whether you're just starting or have some experience. It is designed for:
@@ -48,15 +48,19 @@ const WhoIsThisCourseForQA = () => {
             <li>Work toward financial independence with structured learning.</li>
           </ul>
 
-          {/* ✅ Enroll Now Button - uses navigate */}
-          <motion.button
+          {/* ✅ Enroll Now Button - aligned properly */}
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={handleEnrollClick}
-            className="mt-6 inline-block px-6 py-3 bg-[#D9070A] text-white font-semibold rounded-md hover:bg-gray-900 transition"
+            className="pt-4 flex justify-center"
           >
-            Enroll Now
-          </motion.button>
+            <button
+              onClick={handleEnrollClick}
+              className="px-6 py-3 bg-[#D9070A] text-white font-semibold rounded-md hover:bg-gray-900 transition"
+            >
+              Enroll Now
+            </button>
+          </motion.div>
         </motion.div>
       </div>
     </section>
