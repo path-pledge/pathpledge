@@ -1,0 +1,103 @@
+@import "tailwindcss";
+.shiny-line {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1)
+  );
+  background-size: 200% 100%;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+
+/* ✨ Shiny gradient text effect */
+@keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(90deg, #D9070a, #949493, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 7.5s linear infinite;
+}
+
+/* 🔻 Smooth underline for nav links */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #D9070A;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* 🌀 Blend effect if needed */
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
+}
+
+/* 🔮 Blob animations */
+@keyframes blob1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+}
+
+@keyframes blob2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-20px, 30px) scale(1.05);
+  }
+}
+
+@keyframes blob3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(20px, -10px) scale(1.08);
+  }
+}
+
+.animate-blob1 {
+  animation: blob1 10s ease-in-out infinite;
+}
+.animate-blob2 {
+  animation: blob2 12s ease-in-out infinite;
+}
+.animate-blob3 {
+  animation: blob3 15s ease-in-out infinite;
+}
