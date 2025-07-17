@@ -11,6 +11,7 @@ const ContactSection = React.forwardRef((props, ref) => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({ phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = useRef(null);
@@ -26,6 +27,15 @@ const ContactSection = React.forwardRef((props, ref) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    if (name === "phone") {
+      const isValidPhone = /^\d{10}$/.test(value);
+      setErrors((prev) => ({
+        ...prev,
+        phone: isValidPhone || value === "" ? "" : "Phone number must be 10 digits.",
+      }));
+    }
+
     setFormData((prev) => ({
       ...prev,
       [name]: value,
@@ -35,8 +45,13 @@ const ContactSection = React.forwardRef((props, ref) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const isValidPhone = /^\d{10}$/.test(formData.phone);
     if (!formData.fullName || !formData.phone) {
       alert("Please fill out the required fields.");
+      return;
+    }
+    if (!isValidPhone) {
+      setErrors((prev) => ({ ...prev, phone: "Phone number must be exactly 10 digits." }));
       return;
     }
 
@@ -50,6 +65,7 @@ const ContactSection = React.forwardRef((props, ref) => {
 
       setSubmitted(true);
       setFormData({ fullName: "", phone: "", message: "" });
+      setErrors({ phone: "" });
       setTimeout(() => setSubmitted(false), 3000);
     } catch (error) {
       console.error("Firebase Error:", error);
@@ -60,11 +76,7 @@ const ContactSection = React.forwardRef((props, ref) => {
   };
 
   return (
-    <section
-      id="contact"
-      ref={ref}
-      className="bg-gray-100 py-18 px-6 md:px-20"
-    >
+    <section id="contact" ref={ref} className="bg-gray-100 py-18 px-6 md:px-20">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="space-y-8">
@@ -146,15 +158,27 @@ const ContactSection = React.forwardRef((props, ref) => {
               onChange={handleChange}
             />
 
-            <FormField
-              label="Phone Number *"
-              type="tel"
-              name="phone"
-              placeholder="Enter your phone number"
-              value={formData.phone}
-              onChange={handleChange}
-            />
+            {/* Phone Number with Validation */}
+            <div className="flex flex-col">
+              <label htmlFor="phone" className="mb-1 text-sm font-medium">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Enter your phone number"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="p-3 rounded-md bg-white text-black border border-gray-300 focus:outline-none focus:border-black"
+              />
+              {errors.phone && (
+                <p className="text-yellow-300 text-sm mt-1">{errors.phone}</p>
+              )}
+            </div>
 
+            {/* Message */}
             <div className="flex flex-col">
               <label htmlFor="message" className="mb-1 text-sm font-medium">
                 Your Message
@@ -170,6 +194,7 @@ const ContactSection = React.forwardRef((props, ref) => {
               ></textarea>
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}

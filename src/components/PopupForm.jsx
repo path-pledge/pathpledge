@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logoWatermark from "../assets/logo.png";
 
-import { db } from "../firebase"; // adjust path if needed
+import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
 
 const PopupForm = () => {
@@ -11,6 +11,7 @@ const PopupForm = () => {
     lastName: "",
     phone: "",
   });
+  const [errors, setErrors] = useState({ phone: "" });
 
   useEffect(() => {
     const timer = setTimeout(() => setShow(true), 5000);
@@ -18,17 +19,32 @@ const PopupForm = () => {
   }, []);
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      const isValidPhone = /^\d{10}$/.test(value);
+      setErrors((prev) => ({
+        ...prev,
+        phone: isValidPhone || value === "" ? "" : "Phone number must be 10 digits.",
+      }));
+    }
+
     setFormData((prev) => ({
       ...prev,
-      [e.target.name]: e.target.value,
+      [name]: value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const isValidPhone = /^\d{10}$/.test(formData.phone);
+    if (!isValidPhone) {
+      setErrors((prev) => ({ ...prev, phone: "Phone number must be exactly 10 digits." }));
+      return;
+    }
+
     try {
-      // Step 1: Save data to Firestore
       await addDoc(collection(db, "brochureForms"), {
         ...formData,
         source: "popup",
@@ -37,8 +53,7 @@ const PopupForm = () => {
 
       console.log("Form data saved to Firestore:", formData);
 
-      // Step 2: Trigger brochure download
-      const brochureUrl = "/brochure.pdf"; // must be in public folder
+      const brochureUrl = "/brochure.pdf";
       const link = document.createElement("a");
       link.href = brochureUrl;
       link.download = "Trading_Brochure.pdf";
@@ -46,7 +61,6 @@ const PopupForm = () => {
       link.click();
       document.body.removeChild(link);
 
-      // Step 3: Close popup
       setShow(false);
     } catch (error) {
       console.error("Error saving form data:", error);
@@ -105,15 +119,20 @@ const PopupForm = () => {
               />
             </div>
 
-            <input
-              type="tel"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              placeholder="Phone Number"
-              className="w-full border px-4 py-2 rounded-md focus:outline-none"
-              required
-            />
+            <div className="flex flex-col">
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                className="w-full border px-4 py-2 rounded-md focus:outline-none"
+                required
+              />
+              {errors.phone && (
+                <p className="text-yellow-600 text-sm mt-1">{errors.phone}</p>
+              )}
+            </div>
 
             <button
               type="submit"
