@@ -101,3 +101,267 @@
 .animate-blob3 {
   animation: blob3 15s ease-in-out infinite;
 }
+
+
+
+
+
+/* --- Custom CSS Animations for Premium Feel --- */
+
+/* Basic Fade-in Animation for Sections */
+.section-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInFromBottom 1s ease-out forwards;
+  /* Adjust delay as needed for different sections */
+  /* Example: animation-delay: 0.2s; for subsequent sections */
+}
+
+/* Hero Section Text Animations */
+.hero-text-animate p,
+.hero-text-animate h1,
+.hero-text-animate a {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.hero-text-animate .animate-slide-up-1 { animation-delay: 0.2s; }
+.hero-text-animate .animate-slide-up-2 { animation-delay: 0.4s; }
+.hero-text-animate .animate-slide-up-3 { animation-delay: 0.6s; }
+.hero-text-animate .animate-slide-up-4 { animation-delay: 0.8s; }
+
+/* Hero Image Zoom In */
+.animate-image-zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 1s ease-out forwards;
+  animation-delay: 1s; /* Image thoda baad mein aaye */
+}
+
+/* Bubble/Badge Fade In */
+.animate-fade-in-bubble {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+  animation-delay: 1.5s; /* Image ke baad aaye */
+}
+
+
+/* Header Fade In Down */
+.animate-fade-in-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 0.8s ease-out forwards;
+}
+
+/* Company Name Glow (replaced text-glow) */
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Feature Card Animations (Trust & Authority Section) */
+.animate-feature-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.7s ease-out forwards;
+}
+
+.animate-feature-card.delay-100ms { animation-delay: 0.1s; }
+.animate-feature-card.delay-200ms { animation-delay: 0.2s; }
+/* Add more delays if you have more cards, e.g., delay-300ms */
+
+
+/* Icons inside cards bounce (Trust & Authority Section) */
+.animate-bounce-icon {
+  animation: bounceIcon 2s infinite ease-in-out;
+}
+.animate-bounce-icon.delay-100ms { animation-delay: 0.1s; }
+.animate-bounce-icon.delay-200ms { animation-delay: 0.2s; }
+
+
+/* Process Step Animations (The PathPledge Advantage) */
+.animate-process-step {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.7s ease-out forwards;
+}
+.animate-process-step.delay-200ms { animation-delay: 0.2s; }
+.animate-process-step.delay-400ms { animation-delay: 0.4s; }
+
+
+/* Numbers Pulse (Process Section) */
+.animate-pulse-number {
+  animation: pulseNumber 2s infinite ease-in-out;
+}
+
+/* Arrows Slide (Process Section) */
+.animate-arrow-slide {
+  animation: arrowSlide 1.5s infinite ease-in-out;
+}
+
+
+/* What You'll Learn/Gain Image Zoom In */
+.animate-zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  animation: zoomIn 1s ease-out forwards;
+}
+
+/* List Item Animations (What You'll Learn/Gain Section) */
+.animate-list-item {
+  opacity: 0;
+  transform: translateX(-20px); /* Slide from left */
+  animation: slideInFromLeft 0.6s ease-out forwards;
+}
+.animate-list-item.delay-100ms { animation-delay: 0.1s; }
+.animate-list-item.delay-200ms { animation-delay: 0.2s; }
+.animate-list-item.delay-300ms { animation-delay: 0.3s; }
+.animate-list-item.delay-400ms { animation-delay: 0.4s; }
+.animate-list-item.delay-500ms { animation-delay: 0.5s; }
+
+
+/* Testimonial Card Animations */
+.animate-testimonial-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: slideUpFadeIn 0.7s ease-out forwards;
+}
+/* Note: Testimonial cards have inline style animationDelay for staggered effect */
+
+
+/* Form Fade In */
+.animate-form-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+
+/* --- Keyframe Definitions (Pure CSS) --- */
+
+@keyframes fadeInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 1px rgba(217, 7, 10, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(217, 7, 10, 1)); /* More pronounced glow */
+  }
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIcon {
+  0%, 100% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseNumber {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.1); /* Thoda zyada pulse */
+    box-shadow: 0 0 20px rgba(217, 7, 10, 0.7); /* Stronger glow */
+  }
+}
+
+@keyframes arrowSlide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* --- Utility Classes for Animation Delays (If needed beyond default Tailwind) --- */
+/* You might already have these from Tailwind's built-in delay utilities,
+   but defining them here ensures they work if tailwind.config.js is absent. */
+.delay-100ms { animation-delay: 0.1s; }
+.delay-200ms { animation-delay: 0.2s; }
+.delay-300ms { animation-delay: 0.3s; }
+.delay-400ms { animation-delay: 0.4s; }
+.delay-500ms { animation-delay: 0.5s; }
+.delay-600ms { animation-delay: 0.6s; }
+/* ... and so on ... */
+
+

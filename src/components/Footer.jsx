@@ -44,8 +44,8 @@ const Footer = () => {
   const socialLinks = [
     { icon: Facebook, url: "https://facebook.com" },
     { icon: Twitter, url: "https://twitter.com" },
-    { icon: Instagram, url: "https://instagram.com" },
-    { icon: Linkedin, url: "https://linkedin.com" },
+    { icon: Instagram, url: "https://www.instagram.com/tradingwithpathpledge/" },
+    { icon: Linkedin, url: "https://www.linkedin.com/company/pathpledge/" },
   ];
 
   return (
@@ -89,27 +89,42 @@ const Footer = () => {
         <div className="w-full h-px lg:w-px lg:h-full mx-auto shiny-line" />
 
 
-        {/* Column 3: Contact Info */}
-        <div >
-          <h3 className="text-white font-extrabold text-lg">Contact</h3>
-          <div className="space-y-3 mt-4 text-sm">
-            <div className="flex items-start space-x-2">
-              <Mail className="mt-1" />
-              <span>support@pathpledge.in</span>
-            </div>
-            <div className="flex items-start space-x-2">
-              <PhoneCall className="mt-1" />
-              <span>+91-8827240770</span>
-            </div>
-            <div className="flex items-start space-x-2">
-              <MapPin className="mt-1" />
-              <span>
-                Raipur Hybrid Center, Off No. 7030, Currency Tower, VIP Road,
-                Raipur, Chhattisgarh 492013
-              </span>
-            </div>
-          </div>
-        </div>
+       {/* Column 3: Contact Info */}
+<div>
+  <h3 className="text-white font-extrabold text-lg">Contact</h3>
+  <div className="space-y-3 mt-4 text-sm">
+    <div className="flex items-start space-x-2">
+      <Mail className="mt-1" />
+      <a
+        href="mailto:support@pathpledge.in"
+        className="hover:text-red-400 transition hover:underline"
+      >
+        support@pathpledge.in
+      </a>
+    </div>
+    <div className="flex items-start space-x-2">
+      <PhoneCall className="mt-1" />
+      <a
+        href="tel:+918827240770"
+        className="hover:text-red-400 transition hover:underline"
+      >
+        +91-8827240770
+      </a>
+    </div>
+    <div className="flex items-start space-x-2">
+      <MapPin className="mt-1 text-white w-6 h-6" />
+      <a
+        href="https://www.google.com/maps/place/Pathpledge+Stock+Market+Academy/@21.2384348,81.6767633,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd7961448eaf:0xc1cb16940a271afb!8m2!3d21.2384348!4d81.6793436!16s%2Fg%2F11xl6kk38f?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-red-400 transition hover:underline"
+      >
+        Raipur Hybrid Center, Off No. 7030, Currency Tower, VIP Road, Raipur, Chhattisgarh 492013
+      </a>
+    </div>
+  </div>
+</div>
+
 
         {/* Responsive Divider */}
         <div className="w-full h-px lg:w-px lg:h-full mx-auto shiny-line" />

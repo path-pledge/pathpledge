@@ -4,9 +4,9 @@ import BhushanImage from "../assets/Bhushan.jpg";
 
 const LeaderboardPage = () => {
   return (
-    <div className="min-h-screen bg-gray-100 py-16  sm:px-6">
+    <div className="min-h-screen bg-gray-100 py-16  ">
       {/* Header */}
-      <div className="text-center bg-black py-10 mb-8">
+      <div className="text-center w-full bg-black py-10 mb-12">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Leaderboard</h1>
         <p className="text-white mt-1 text-sm sm:text-base">Home / Leaderboard</p>
       </div>

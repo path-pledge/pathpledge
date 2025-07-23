@@ -1,18 +1,18 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // 🧠 Import this
+import { useNavigate } from "react-router-dom";
 import heroImg from "../assets/h111.png";
 import bgImg from "../assets/b1.jpg";
 import { motion } from "framer-motion";
 
 const WelcomeHero = () => {
-  const navigate = useNavigate(); // 🔥 Hook to navigate
+  const navigate = useNavigate();
 
   const handleEnrollClick = () => {
-    navigate("/contact"); // 🔁 Redirect to contact page
+    navigate("/contact");
   };
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-16 md:py-24 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-22 md:py-14 lg:py-24 overflow-hidden">
       <img
         src={bgImg}
         alt="background"
@@ -25,14 +25,14 @@ const WelcomeHero = () => {
         <motion.img
           src={heroImg}
           alt="Trading Dashboard"
-          className="w-[85%] md:w-[65%] lg:w-[50%] max-w-3xl object-contain mb-10"
+          className="w-[95%] sm:w-[80%] md:w-[65%] lg:w-[50%] max-w-3xl object-contain mb-6 sm:mb-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
 
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-4 leading-tight px-2"
+          className="text-3xl sm:text-4xl  md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-3 sm:mb-4 leading-tight px-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -41,15 +41,14 @@ const WelcomeHero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-base sm:text-lg text-gray-600 max-w-2xl mb-8 px-4"
+          className="text-md font-bold text-justify sm:text-base md:text-lg text-gray-950 max-w-2xl mb-6 sm:mb-8 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          PathPledge Academy is one of the leading stock market institutes...
+          PathPledge Academy is one of the leading stock market institutes. We offer a comprehensive range of courses designed to help you master the art of trading. 
         </motion.p>
 
-        {/* 🔁 Updated Button */}
         <motion.button
           onClick={handleEnrollClick}
           className="bg-[#d9070a] text-white px-6 py-3 rounded-md font-medium hover:bg-black transition shadow-lg"

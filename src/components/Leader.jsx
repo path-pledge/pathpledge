@@ -252,10 +252,10 @@ const Leader = () => {
 
       {/* Why This Matters Section */}
       <div className="mt-14 text-center">
-        <h3 className="text-3xl sm:text-4xl text-[#D9070A] font-extrabold">
+        <h3 className="text-3xl sm:text-5xl text-[#D9070A] font-extrabold">
           Why This Matters
         </h3>
-        <div className="text-gray-600 text-justify mt-4 space-y-4 max-w-3xl mx-auto px-2">
+        <div className="text-gray-600 text-justify mt-4 space-y-4 max-w-5xl mx-auto px-2">
           <p>
             At PathPledge, we believe trading isn't just about numbers—it's about discipline, precision, and growth.
             Our leaderboard is a celebration of learners who have consistently applied data-driven strategies,

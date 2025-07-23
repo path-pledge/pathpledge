@@ -16,11 +16,11 @@ const Programs = () => {
     <div>
       <TradingWithDataScience />
       <PhasesInPhone />
-      <WhoIsThisCourseForQA contactRef={contactRef} /> 
+      <WhoIsThisCourseForQA />
       <DifferentProgramSection />
       <PremiumOfferSection />
       <TestimonialSection />
-      <ContactSection innerRef={contactRef} /> 
+      <ContactSection />
     </div>
   );
 };

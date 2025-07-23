@@ -108,7 +108,7 @@ export const FAQSection = () => {
       </div>
 
       {/* FAQ Items */}
-      <div className="max-w-3xl mx-auto text-left space-y-6">
+      <div className="max-w-6xl mx-auto text-left space-y-6">
         {(faqData[selectedCategory] || []).map((faq, index) => (
           <div
             key={index}

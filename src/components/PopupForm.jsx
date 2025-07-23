@@ -3,9 +3,11 @@ import logoWatermark from "../assets/logo.png";
 
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
+// 👇 Add props here
 
-const PopupForm = () => {
-  const [show, setShow] = useState(false);
+
+const PopupForm = ({ onClose, onSubmit }) => {
+  const [show, setShow] = useState(onClose ? true : false); // if manual, show immediately
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -14,13 +16,14 @@ const PopupForm = () => {
   const [errors, setErrors] = useState({ phone: "" });
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 5000);
-    return () => clearTimeout(timer);
-  }, []);
+    if (!onClose) {
+      const timer = setTimeout(() => setShow(true), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [onClose]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     if (name === "phone") {
       const isValidPhone = /^\d{10}$/.test(value);
       setErrors((prev) => ({
@@ -37,7 +40,6 @@ const PopupForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const isValidPhone = /^\d{10}$/.test(formData.phone);
     if (!isValidPhone) {
       setErrors((prev) => ({ ...prev, phone: "Phone number must be exactly 10 digits." }));
@@ -47,11 +49,9 @@ const PopupForm = () => {
     try {
       await addDoc(collection(db, "brochureForms"), {
         ...formData,
-        source: "popup",
+        source: onClose ? "manual" : "popup",
         createdAt: new Date(),
       });
-
-      console.log("Form data saved to Firestore:", formData);
 
       const brochureUrl = "/brochure.pdf";
       const link = document.createElement("a");
@@ -61,7 +61,11 @@ const PopupForm = () => {
       link.click();
       document.body.removeChild(link);
 
-      setShow(false);
+      if (onClose) {
+        onSubmit?.(); // ✅ close from parent if provided
+      } else {
+        setShow(false);
+      }
     } catch (error) {
       console.error("Error saving form data:", error);
       alert("Something went wrong. Please try again.");
@@ -79,12 +83,14 @@ const PopupForm = () => {
           backgroundSize: "200px",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          opacity: 1,
         }}
       >
         <div className="w-full h-full p-6 sm:p-10 bg-white/90 backdrop-blur text-gray-800 relative z-10 rounded-3xl">
           <button
-            onClick={() => setShow(false)}
+            onClick={() => {
+              if (onClose) onClose(); // ✅ manual close
+              else setShow(false);    // ✅ auto close
+            }}
             className="absolute top-4 right-5 text-2xl font-bold text-gray-500 hover:text-red-500"
           >
             ✕

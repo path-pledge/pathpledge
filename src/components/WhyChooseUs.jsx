@@ -21,18 +21,18 @@ const PathPledgeIntro = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex-1 text-justify lg:text-left"
+          className="flex-1  text-center lg:text-left"
         >
-          <p className="text-sm uppercase font-bold text-[#D9070A] tracking-widest mb-3">
+          <p className="text-sm uppercase  font-bold text-[#D9070A] tracking-widest mb-3">
             About PathPledge
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight mb-5">
-            Master Trading with <span className="text-[#D9070A]">PathPledge</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800  mb-5">
+            Master Trading with <span className="text-[#D9070A]">PathPledge Academy</span>
           </h2>
 
-          <p className="text-black text-xl leading-relaxed max-w-xl mx-auto lg:mx-0 mb-6">
-            PathPledge is a premier trading learning platform designed to educate and empower aspiring traders. We simplify the complexities of the market and help you build a strong foundation for a successful trading journey.
+          <p className="text-black text-md md:text-xl leading-relaxed  text-justify lg:mx-0 mb-6">
+            PathPledge is a premier trading learning platform designed to reduce the barriers to entry and empower aspiring traders. We simplify the complexities of the market and help you build a strong foundation for a successful trading journey.
           </p>
 
           {/* Mobile Image */}
@@ -62,7 +62,7 @@ const PathPledgeIntro = () => {
             <img
               src={pathpledgeLogo}
               alt="PathPledge Visual"
-              className="relative z-10 w-72 sm:w-80 rounded-xl shadow-lg"
+              className="relative z-10 w-72 sm:w-80 rounded-sm shadow-lg"
             />
           </div>
 

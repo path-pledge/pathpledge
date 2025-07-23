@@ -1,8 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../assets/8.jpg";
+import heroImage from "../assets/T11.jpg";
+import { useNavigate } from "react-router-dom";
 
 const TradingWithDataScience = () => {
+  const navigate = useNavigate();
+
+  const handleStartNow = () => {
+    navigate("/contact?scrollToForm=true");
+  };
+
   return (
     <section className="relative w-full overflow-hidden bg-black text-white flex items-center min-h-[85vh] md:h-[90vh]  md:mt-14 ">
       
@@ -18,7 +25,7 @@ const TradingWithDataScience = () => {
       />
 
       {/* ✅ Overlay: solid black for mobile, gradient for desktop */}
-      <div className="absolute inset-0 bg-black/80 md:bg-gradient-to-r md:from-black md:via-black/80 md:to-transparent" />
+      <div className="absolute inset-0 bg-black/80 md:bg-gradient-to-r md:from-gray-200 md:via-gray-500/80 md:to-transparent" />
 
       {/* ✅ Text Content */}
       <motion.div
@@ -31,7 +38,7 @@ const TradingWithDataScience = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl sm:text-3xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6"
+          className="text-4xl  sm:text-gray-800 sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6"
         >
           FAST-TRACK YOUR TRADING WITH HIGH IMPACT LEARNING IN JUST 3 MONTHS
         </motion.h1>
@@ -40,7 +47,7 @@ const TradingWithDataScience = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="text-white/90 text-sm sm:text-base md:text-lg mb-6"
+          className="text-slate-100/90 font-bold text-lg sm:text-black sm:text-base md:text-xl mb-10"
         >
           Learn technical + data-driven strategies with expert mentors, real charts, and AI insights all in one program.
         </motion.p>
@@ -48,7 +55,7 @@ const TradingWithDataScience = () => {
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.98 }}
-          href="#courses"
+          onClick={handleStartNow}
           className="inline-block px-6 py-3 rounded-md font-semibold text-white bg-[#D9070A] hover:bg-gray-900 transition duration-300 shadow-lg"
         >
           Explore Course

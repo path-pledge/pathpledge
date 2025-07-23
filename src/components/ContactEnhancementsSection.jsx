@@ -31,10 +31,13 @@ const ContactEnhancementsSection = () => {
       </div>
 
       {/* Google Maps Embed */}
-     <div id="mapSection" className="w-full h-[400px] mb-20 rounded-xl overflow-hidden shadow-lg">
+    <div
+  id="mapSection"
+  className="w-full h-[400px] mb-20 rounded-xl overflow-hidden shadow-lg"
+>
   <iframe
-    title="PathPledge Office"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.3652573891034!2d81.62786477508147!3d21.25000908044768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd74021a7bcd%3A0x6b70a4b6e24376cc!2sCurrency%20Tower!5e0!3m2!1sen!2sin!4v1719687872367!5m2!1sen!2sin"
+    title="PathPledge Stock Market Academy"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3738.567929729352!2d81.6767633!3d21.2384348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28dd7961448eaf%3A0xc1cb16940a271afb!2sPathpledge%20Stock%20Market%20Academy!5e0!3m2!1sen!2sin!4v1721557690807!5m2!1sen!2sin"
     width="100%"
     height="100%"
     style={{ border: 0 }}
@@ -44,10 +47,11 @@ const ContactEnhancementsSection = () => {
   ></iframe>
 </div>
 
+
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-20">
         <a
-          href="https://instagram.com/"
+          href="https://www.instagram.com/tradingwithpathpledge/"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
