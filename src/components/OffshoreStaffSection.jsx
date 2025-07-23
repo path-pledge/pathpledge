@@ -1,5 +1,4 @@
 import { FaCheckCircle } from "react-icons/fa";
-
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -40,15 +39,14 @@ export const OffshoreStaffSection = () => {
             className="block md:hidden"
           >
             <div className="w-full max-w-md mx-auto pt-4">
-             <iframe
-  className="w-full aspect-video rounded-xl shadow-xl border-4 border-white"
-  src="https://www.youtube.com/embed/kMplMSdXuCA"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-></iframe>
-
+              <iframe
+                className="w-full aspect-video rounded-xl shadow-xl border-4 border-white"
+                src="https://www.youtube.com/embed/n7SuPoRhyzEb"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
           </motion.div>
 
@@ -88,15 +86,14 @@ export const OffshoreStaffSection = () => {
           className="hidden md:flex justify-center md:justify-end"
         >
           <div className="w-full max-w-md">
-           <iframe
-  className="w-full h-full aspect-video rounded-xl shadow-xl border-4 border-white"
-  src="https://www.youtube.com/embed/kMplMSdXuCA"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-  allowFullScreen
-></iframe>
-
+            <iframe
+              className="w-full h-full aspect-video rounded-xl shadow-xl border-4 border-white"
+              src="https://www.youtube.com/embed/n7SuPoRhyzEb"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
         </motion.div>
       </div>
