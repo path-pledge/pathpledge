@@ -6,13 +6,13 @@ import { getAuth } from "firebase/auth"; // for Auth
 import { getStorage } from "firebase/storage"; // for Storage
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDF90kkmCVvnGAAzH9RV9-PyNknlRJTn8M",
-  authDomain: "pathpladge.firebaseapp.com",
-  projectId: "pathpladge",
-  storageBucket: "pathpladge.firebasestorage.app",
-  messagingSenderId: "235627627996",
-  appId: "1:235627627996:web:60c4477255f196654d3b19",
-  measurementId: "G-KE9JNQNCCZ"
+  apiKey: "AIzaSyAddDg5V_4A6M-gsBsY_BuLXfw7W6itjE0",
+  authDomain: "pathpledgeacademy.firebaseapp.com",
+  projectId: "pathpledgeacademy",
+  storageBucket: "pathpledgeacademy.appspot.com", // ✅ FIXED
+  messagingSenderId: "426962303657",
+  appId: "1:426962303657:web:a6f40d6ead672379ec47b8",
+  measurementId: "G-96WT8N9G92"
 };
 
 // Initialize Firebase
