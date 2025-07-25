@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Facebook,
   Twitter,
@@ -58,7 +59,7 @@ const Footer = () => {
             alt="PathPledge Logo"
             className="h-28 w-auto object-contain"
           />
-          <span className="text-2xl font-bold shiny-text ">
+          <span className="text-2xl font-bold shiny-text">
             PathPledge Investment Academy
           </span>
         </div>
@@ -66,20 +67,19 @@ const Footer = () => {
         {/* Responsive Divider */}
         <div className="w-full h-px lg:w-px lg:h-full mx-auto shiny-line" />
 
-
         {/* Column 2: Quick Links */}
-        <div >
+        <div>
           <h3 className="text-white font-extrabold text-lg">Quick Links</h3>
           <ul className="mt-3 space-y-3 text-gray-100">
             {navLinks.map(({ name, icon: Icon, link }) => (
               <li key={name}>
-                <a
-                  href={link}
+                <Link
+                  to={link}
                   className="flex items-center space-x-2 hover:text-red-500 hover:underline transition"
                 >
                   <Icon className="h-5 w-5" />
                   <span>{name}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -88,49 +88,47 @@ const Footer = () => {
         {/* Responsive Divider */}
         <div className="w-full h-px lg:w-px lg:h-full mx-auto shiny-line" />
 
-
-       {/* Column 3: Contact Info */}
-<div>
-  <h3 className="text-white font-extrabold text-lg">Contact</h3>
-  <div className="space-y-3 mt-4 text-sm">
-    <div className="flex items-start space-x-2">
-      <Mail className="mt-1" />
-      <a
-        href="mailto:support@pathpledge.in"
-        className="hover:text-red-400 transition hover:underline"
-      >
-        support@pathpledge.in
-      </a>
-    </div>
-    <div className="flex items-start space-x-2">
-      <PhoneCall className="mt-1" />
-      <a
-        href="tel:+918827240770"
-        className="hover:text-red-400 transition hover:underline"
-      >
-        +91-8827240770
-      </a>
-    </div>
-    <div className="flex items-start space-x-2">
-      <MapPin className="mt-1 text-white w-6 h-6" />
-      <a
-        href="https://www.google.com/maps/place/Pathpledge+Stock+Market+Academy/@21.2384348,81.6767633,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd7961448eaf:0xc1cb16940a271afb!8m2!3d21.2384348!4d81.6793436!16s%2Fg%2F11xl6kk38f?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-red-400 transition hover:underline"
-      >
-        Raipur Hybrid Center, Off No. 7030, Currency Tower, VIP Road, Raipur, Chhattisgarh 492013
-      </a>
-    </div>
-  </div>
-</div>
-
+        {/* Column 3: Contact Info */}
+        <div>
+          <h3 className="text-white font-extrabold text-lg">Contact</h3>
+          <div className="space-y-3 mt-4 text-sm">
+            <div className="flex items-start space-x-2">
+              <Mail className="mt-1" />
+              <a
+                href="mailto:support@pathpledge.in"
+                className="hover:text-red-400 transition hover:underline"
+              >
+                support@pathpledge.in
+              </a>
+            </div>
+            <div className="flex items-start space-x-2">
+              <PhoneCall className="mt-1" />
+              <a
+                href="tel:+918827240770"
+                className="hover:text-red-400 transition hover:underline"
+              >
+                +91-8827240770
+              </a>
+            </div>
+            <div className="flex items-start space-x-2">
+              <MapPin className="mt-1 text-white w-6 h-6" />
+              <a
+                href="https://www.google.com/maps/place/Pathpledge+Stock+Market+Academy/@21.2384348,81.6767633,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd7961448eaf:0xc1cb16940a271afb!8m2!3d21.2384348!4d81.6793436!16s%2Fg%2F11xl6kk38f?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-red-400 transition hover:underline"
+              >
+                Raipur Hybrid Center, Off No. 7030, Currency Tower, VIP Road, Raipur, Chhattisgarh 492013
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Responsive Divider */}
         <div className="w-full h-px lg:w-px lg:h-full mx-auto shiny-line" />
 
         {/* Column 4: Social + Subscribe */}
-        <div >
+        <div>
           <h3 className="text-white font-extrabold text-lg">Follow Us</h3>
           <div className="flex space-x-4 mt-4">
             {socialLinks.map(({ icon: Icon, url }, index) => (
