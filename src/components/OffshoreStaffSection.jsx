@@ -41,8 +41,8 @@ export const OffshoreStaffSection = () => {
             <div className="w-full max-w-md mx-auto pt-4">
               <iframe
                 className="w-full aspect-video rounded-xl shadow-xl border-4 border-white"
-                src="https://www.youtube.com/embed/n7SuPoRhyzEb"
-                title="YouTube video player"
+                src="https://www.youtube.com/embed/n7SuPoRhyzE"
+                title="PathPledge Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -88,8 +88,8 @@ export const OffshoreStaffSection = () => {
           <div className="w-full max-w-md">
             <iframe
               className="w-full h-full aspect-video rounded-xl shadow-xl border-4 border-white"
-              src="https://www.youtube.com/embed/n7SuPoRhyzEb"
-              title="YouTube video player"
+              src="https://www.youtube.com/embed/n7SuPoRhyzE"
+              title="PathPledge Video"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

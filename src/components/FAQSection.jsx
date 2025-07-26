@@ -142,11 +142,13 @@ export const FAQSection = () => {
         </a>
 
         <a
-          href="#contact"
-          className="px-8 py-3 rounded-md font-bold text-white bg-[#D9070A] shadow-xl hover:bg-gray-900 transition"
-        >
-          Free Demo
-        </a>
+  href="https://www.youtube.com/watch?v=n7SuPoRhyzE"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-8 py-3 rounded-md font-bold text-white bg-[#D9070A] shadow-xl hover:bg-gray-900 transition"
+>
+  Free Demo
+</a>
       </div>
     </section>
   );

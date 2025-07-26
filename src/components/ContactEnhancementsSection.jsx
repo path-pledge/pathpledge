@@ -22,12 +22,14 @@ const ContactEnhancementsSection = () => {
         </p>
 
         {/* Visit Us Button */}
-        <button
-          onClick={scrollToMap}
-          className="mt-6 bg-[#D9070A] text-white px-6 py-3 rounded-md font-extrabold hover:bg-gray-800 transition"
-        >
-          Visit Us
-        </button>
+        <a
+  href="https://g.co/kgs/2ZyuEyb"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-block bg-[#D9070A] text-white px-6 py-3 rounded-md font-extrabold hover:bg-gray-800 transition"
+>
+  Visit Us
+</a>
       </div>
 
       {/* Google Maps Embed */}

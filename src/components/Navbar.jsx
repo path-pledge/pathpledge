@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-import { FiPhone } from "react-icons/fi";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,21 +34,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300">
-      {/* Scroll Progress Bar */}
-      <motion.div
-        className="h-[3px] bg-gradient-to-r from-orange-500 to-red-600 fixed top-0 left-0 z-[60]"
-        style={{ width: `${scrollProgress}%` }}
-        initial={{ width: 0 }}
-        animate={{ width: `${scrollProgress}%` }}
-        transition={{ ease: "easeOut", duration: 0.2 }}
-      />
-
+    <nav className="fixed top-[56px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
         {/* Logo */}
-        <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse">
-          PathPledge
-        </div>
+        <Link to="/">
+  <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
+    PathPledge
+  </div>
+</Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 text-[18px] font-semibold text-black">
@@ -68,46 +60,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Call Buttons - Desktop Only */}
-        <div className="hidden md:flex gap-4">
-          <motion.a
-            href="tel:+918827240770"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-tr from-[#D9070A] to-[#ff6633] text-white font-semibold shadow-lg backdrop-blur-lg transition-transform duration-300"
-          >
-            <FiPhone className="text-lg animate-pulse" />
-            +91 88272 40770
-          </motion.a>
-          <motion.a
-            href="tel:+918700501149"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-tr from-[#D9070A] to-[#ff6633] text-white font-semibold shadow-lg backdrop-blur-lg transition-transform duration-300"
-          >
-            <FiPhone className="text-lg animate-pulse" />
-            +91 87005 01149
-          </motion.a>
-        </div>
-
-        {/* Call Icons - Mobile Only */}
-        <div className="md:hidden absolute right-20 flex gap-3">
-          <a
-            href="tel:+918827240770"
-            className="p-3 rounded-full bg-gradient-to-br from-[#D9070A] to-[#ff6633] text-white shadow-md"
-            aria-label="Call 88272 40770"
-          >
-            <FiPhone className="text-xl animate-pulse" />
-          </a>
-          <a
-            href="tel:+918700501149"
-            className="p-3 rounded-full bg-gradient-to-br from-[#D9070A] to-[#ff6633] text-white shadow-md"
-            aria-label="Call 87005 01149"
-          >
-            <FiPhone className="text-xl animate-pulse" />
-          </a>
-        </div>
-
         {/* Hamburger - Mobile */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -122,6 +74,15 @@ const Navbar = () => {
           </motion.div>
         </button>
       </div>
+
+      {/* Scroll Progress Bar (Navbar ke neeche) */}
+      <motion.div
+        className="h-[3px] bg-gradient-to-r from-orange-500 to-red-600 w-full"
+        style={{ width: `${scrollProgress}%` }}
+        initial={{ width: 0 }}
+        animate={{ width: `${scrollProgress}%` }}
+        transition={{ ease: "easeOut", duration: 0.2 }}
+      />
 
       {/* Mobile Menu */}
       <AnimatePresence>
