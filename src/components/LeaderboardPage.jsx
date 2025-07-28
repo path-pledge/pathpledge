@@ -58,15 +58,15 @@ const LeaderboardPage = () => {
       <div className="bg-white rounded-2xl shadow mt-8 p-6 sm:p-8 flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
         <div className="flex-1">
           <p className="text-base sm:text-lg leading-relaxed text-justify">
-            Bhushan Thakre is not just a mentor—she’s the strategic backbone behind many successful traders nurtured at PathPledge.
-            With a background rooted in financial analytics and behavioral finance, she brings a rare combination of market logic,
+            Bhushan Thakre is not just a mentor he’s the strategic backbone behind many successful traders nurtured at PathPledge.
+            With a background rooted in financial analytics and behavioral finance, he brings a rare combination of market logic,
             emotional intelligence, and structured trading to the ecosystem.
             <br /><br />
-            Over the years, she has mastered navigating through different market cycles—bullish surges, bearish dips, and sideways
-            indecision—and has mentored hundreds of learners on building resilient trading frameworks. Her sessions emphasize
+            Over the years, he has mastered navigating through different market cycles—bullish surges, bearish dips, and sideways
+            indecision—and has mentored hundreds of learners on building resilient trading frameworks. His sessions emphasize
             discipline over impulse, strategy over speculation, and learning over blind execution.
             <br /><br />
-            At PathPledge, Bhusha leads:
+            At PathPledge, Bhushan leads:
             <ul className="list-disc list-inside mt-2">
               <li>Live strategy-building workshops focused on intraday, swing, and F&O segments</li>
               <li>Custom model development, where students learn to blend indicators with data-backed decision making</li>
@@ -78,8 +78,8 @@ const LeaderboardPage = () => {
             performance at PathPledge. Her mentorship has led many students from hesitation to precision, from emotion-led trades
             to consistent profitability.
             <br /><br />
-            “I don’t just want students to trade; I want them to think like traders,” says Bhusha.
-            Through her unwavering commitment, Bhusha continues to shape PathPledge into not just a learning platform, but a
+            “I don’t just want students to trade; I want them to think like traders,” says Bhushan.
+            Through his unwavering commitment, Bhushan continues to shape PathPledge into not just a learning platform, but a
             performance-driven trading incubator for the next generation of market leaders.
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mt-6">-Bhushan Thakre</h2>
