@@ -58,7 +58,7 @@ const LeaderboardPage = () => {
       <div className="bg-white rounded-2xl shadow mt-8 p-6 sm:p-8 flex flex-col md:flex-row-reverse items-center md:items-start gap-6">
         <div className="flex-1">
           <p className="text-base sm:text-lg leading-relaxed text-justify">
-            Bhusha is not just a mentor—she’s the strategic backbone behind many successful traders nurtured at PathPledge.
+            Bhushan Thakre is not just a mentor—she’s the strategic backbone behind many successful traders nurtured at PathPledge.
             With a background rooted in financial analytics and behavioral finance, she brings a rare combination of market logic,
             emotional intelligence, and structured trading to the ecosystem.
             <br /><br />
@@ -82,14 +82,14 @@ const LeaderboardPage = () => {
             Through her unwavering commitment, Bhusha continues to shape PathPledge into not just a learning platform, but a
             performance-driven trading incubator for the next generation of market leaders.
           </p>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mt-6">Bhusha</h2>
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mt-6">-Bhushan Thakre</h2>
           <h3 className="text-base sm:text-lg font-bold text-[#D9070A]">Trading Strategist & Educator</h3>
         </div>
         <div className="relative flex justify-center items-center">
           <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-[#F97316] opacity-30 blur-3xl animate-pulse"></div>
           <img
             src={BhushanImage}
-            alt="Bhusha"
+            alt="Bhushan Thakre"
             className="relative rounded-xl w-64 h-64 sm:w-72 sm:h-72 object-cover shadow-2xl"
           />
         </div>

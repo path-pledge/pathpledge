@@ -16,7 +16,6 @@ function App() {
       <ScrollToTop />
       <WhatsAppFloatingButton />
       <Routes>
-       
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="programs" element={<Programs />} />
