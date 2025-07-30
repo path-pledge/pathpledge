@@ -32,6 +32,8 @@ import { FaMoneyBillWave, FaChartLine, FaBrain, FaRegHandshake } from 'react-ico
 // Firebase imports
 import { db } from '../../firebase'; // Corrected import path for your firebase.js
 import { collection, addDoc } from 'firebase/firestore';
+import { FAQSection1 } from '../../components/FAQSection1';
+
 
 
 const testimonials = [
@@ -149,9 +151,10 @@ const LandingPage = () => {
       <header className="bg-white shadow-lg py-4 px-4 md:px-14 flex items-center justify-between sticky top-0 z-50 animate-fade-in-down">
         <div className="flex items-center">
           <h1 className="text-3xl font-extrabold font-inter">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#D9070A] to-red-600 animate-pulse-glow">
-              PathPledge
-            </span>
+           <span className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
+  PathPledge
+</span>
+
           </h1>
         </div>
 
@@ -356,6 +359,40 @@ const LandingPage = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 md:px-8 bg-gray-50 section-fade-in">
+  <div className="max-w-5xl mx-auto text-center">
+    <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6 font-serif">
+      Watch This Before You Decide!
+    </h2>
+    <p className="text-lg text-gray-600 mb-10 font-medium">
+      A powerful message from our founder to help you understand why PathPledge can change your trading journey.
+    </p>
+
+    {/* Responsive YouTube Embed */}
+    <div className="w-full h-[220px] md:h-[500px] mb-10">
+      <iframe
+        className="w-full h-full rounded-xl shadow-2xl border-4 border-[#D9070A]"
+        src="https://www.youtube.com/embed/n7SuPoRhyzE"
+        title="PathPledge Introduction Video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+    {/* Action Button to Scroll to Form */}
+    <motion.a
+      href="#registration-form"
+      whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(217, 7, 10, 0.5)" }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-[#D9070A] text-white font-bold py-4 px-8 rounded-xl text-xl md:text-2xl shadow-lg transition-all duration-300 ease-in-out transform inline-block border border-transparent hover:border-white animate-pulse"
+    >
+      Yes! I Want to Join the Masterclass
+    </motion.a>
+  </div>
+</section>
+
+
         {/* Testimonials/Social Proof Section - UPDATED WITH SELF-SLIDING SWIPER */}
       <section className="py-16 px-4 md:px-8 bg-gray-100 section-fade-in">
         <div className="max-w-7xl mx-auto text-center">
@@ -400,6 +437,7 @@ const LandingPage = () => {
           </Swiper>
         </div>
       </section>
+      <FAQSection1 />
 
       <section id="registration-form" className="py-20 px-4 md:px-8 bg-[#D9070A] text-white section-fade-in">
         <div className="max-w-3xl mx-auto text-center">
@@ -455,7 +493,7 @@ const LandingPage = () => {
               className="w-full bg-[#D9070A] hover:bg-[#B30508] text-white font-bold py-4 px-6 rounded-md text-2xl transition duration-300 ease-in-out transform hover:scale-105 border border-[#D9070A]"
               disabled={submissionStatus?.type === 'submitting'}
             >
-              {submissionStatus?.type === 'submitting' ? 'Submitting...' : 'Win Your Free Trading Masterclass!'}
+              {submissionStatus?.type === 'submitting' ? 'Submitting...' : 'Grab your free Trading Masterclass!'}
             </button>
             <p className="text-sm text-gray-400 mt-4">
               Your data is 100% secure and protected by our advanced encryption.
