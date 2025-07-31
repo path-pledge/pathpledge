@@ -13,7 +13,7 @@ import { Pagination, Autoplay } from 'swiper/modules';
 
 // Import your local images
 import LP1 from '../../assets/18.jpg';
-import LP2 from '../../assets/16.jpg';
+import LP2 from '../../assets/W2.jpg';
 
 import first1 from '../../assets/5.jpg';
 import second2 from '../../assets/6.jpg';
@@ -33,6 +33,8 @@ import { FaMoneyBillWave, FaChartLine, FaBrain, FaRegHandshake } from 'react-ico
 import { db } from '../../firebase'; // Corrected import path for your firebase.js
 import { collection, addDoc } from 'firebase/firestore';
 import { FAQSection1 } from '../../components/FAQSection1';
+import { WebinarSection } from '../../components/WebinarSection';
+import PremiumWebinarSection from '../../components/PremiumWebinarSection';
 
 
 
@@ -391,6 +393,8 @@ const LandingPage = () => {
     </motion.a>
   </div>
 </section>
+
+<PremiumWebinarSection />
 
 
         {/* Testimonials/Social Proof Section - UPDATED WITH SELF-SLIDING SWIPER */}
