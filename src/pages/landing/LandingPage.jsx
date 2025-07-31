@@ -33,7 +33,6 @@ import { FaMoneyBillWave, FaChartLine, FaBrain, FaRegHandshake } from 'react-ico
 import { db } from '../../firebase'; // Corrected import path for your firebase.js
 import { collection, addDoc } from 'firebase/firestore';
 import { FAQSection1 } from '../../components/FAQSection1';
-import { WebinarSection } from '../../components/WebinarSection';
 import PremiumWebinarSection from '../../components/PremiumWebinarSection';
 
 
