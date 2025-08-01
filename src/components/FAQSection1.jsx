@@ -63,7 +63,7 @@ const faqData = {
     {
       question: "How do I connect with your team?",
       answer:
-        "You can email us at 📧 support@pathpledge.in or call us at ☎️ +91-8130245100. We’re available Monday to Saturday, 10 AM to 7 PM. You can also use the contact form on our website or DM us on Instagram @pathpledge.",
+        "You can email us at 📧 investmentsolutions@pathpledge.in or call us at ☎️ +91-9340210770. We’re available Monday to Saturday, 10 AM to 7 PM. You can also use the contact form on our website or DM us on Instagram @pathpledge.",
     },
     {
       question: "Do you offer any free orientation or demo sessions?",

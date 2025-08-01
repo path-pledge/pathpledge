@@ -388,7 +388,7 @@ const LandingPage = () => {
       whileTap={{ scale: 0.95 }}
       className="bg-[#D9070A] text-white font-bold py-4 px-8 rounded-xl text-xl md:text-2xl shadow-lg transition-all duration-300 ease-in-out transform inline-block border border-transparent hover:border-white animate-pulse"
     >
-      Yes! I Want to Join the Masterclass
+      Yes! I Want to Join the Demo Class
     </motion.a>
   </div>
 </section>
@@ -496,7 +496,7 @@ const LandingPage = () => {
               className="w-full bg-[#D9070A] hover:bg-[#B30508] text-white font-bold py-4 px-6 rounded-md text-2xl transition duration-300 ease-in-out transform hover:scale-105 border border-[#D9070A]"
               disabled={submissionStatus?.type === 'submitting'}
             >
-              {submissionStatus?.type === 'submitting' ? 'Submitting...' : 'Grab your free Trading Masterclass!'}
+              {submissionStatus?.type === 'submitting' ? 'Submitting...' : 'Grab your free Demo Class!'}
             </button>
             <p className="text-sm text-gray-400 mt-4">
               Your data is 100% secure and protected by our advanced encryption.
