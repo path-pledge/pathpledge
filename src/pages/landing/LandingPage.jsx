@@ -170,13 +170,13 @@ const LandingPage = () => {
             +91 88272 40770
           </motion.a>
           <motion.a
-            href="tel:+918700501149"
+            href="tel:+919340210770"
             whileHover={{ scale: 1.1, boxShadow: "0 8px 20px rgba(217, 7, 10, 0.4)" }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-2 px-3 py-2 rounded-xl bg-gradient-to-tr from-[#D9070A] to-[#ff6633] text-white font-semibold shadow-lg transition-all duration-300 text-sm md:text-base border border-transparent hover:border-white"
           >
             <FiPhone className="text-lg animate-pulse" />
-            +91 87005 01149
+            +91 93402 10770
           </motion.a>
         </div>
       </header>
