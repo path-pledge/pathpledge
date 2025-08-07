@@ -32,7 +32,7 @@ const PathPledgeIntro = () => {
           </h2>
 
           <p className="text-black text-md md:text-xl leading-relaxed  text-justify lg:mx-0 mb-6">
-            PathPledge is a premier trading learning platform designed to reduce the barriers to entry and empower aspiring traders. We simplify the complexities of the market and help you build a strong foundation for a successful trading journey.
+            At PathPledge Academy, we don’t just teach trading-we forge professional traders. Born from years of backtested strategies and real-market execution, we’ve cracked the code to consistent profitability.
           </p>
 
           {/* Mobile Image */}

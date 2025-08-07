@@ -98,11 +98,11 @@ const ContactSection = React.forwardRef((props, ref) => {
               title="Our Address"
               text={
                 <>
-                  PathPledge Academy – Raipur Hybrid Center
+                  PathPledge Academy 
                   <br />
-                  Off No. 7030, Currency Tower, VIP Road,
+                  Off No. 7030 	7th floor , Currency Tower, VIP Road,
                   <br />
-                  Raipur, Chhattisgarh 492013
+                  Raipur, Chhattisgarh 492001
                 </>
               }
             />

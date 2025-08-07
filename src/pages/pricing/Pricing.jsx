@@ -1,6 +1,6 @@
 import React from 'react'
 import PricingPage from '../../components/PricingPage'
-import PremiumOfferSection from '../../components/PremiumOfferSection'
+// import PremiumOfferSection from '../../components/PremiumOfferSection'
 import InformationSection from '../../components/InformationSection'
 import PlanSection from '../../components/PlanSection'
 import ContactSection from '../../components/ContactSection'
@@ -12,7 +12,7 @@ const Pricing = () => {
       <PricingPage />
     </div>
     <PlanSection />
-    <PremiumOfferSection />
+    {/* <PremiumOfferSection /> */}
     <InformationSection />
     <ContactSection />
     

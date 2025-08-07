@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+
 import { Link } from "react-router-dom";
 import {
-  Facebook,
+  Youtube,
   Twitter,
   Instagram,
   Linkedin,
   Home,
   Book,
-  DollarSign,
+  IndianRupee,
   UserCheck,
   Mail,
   PhoneCall,
@@ -37,14 +38,13 @@ const Footer = () => {
   const navLinks = [
     { name: "Home", icon: Home, link: "/" },
     { name: "Programs", icon: Book, link: "/programs" },
-    { name: "Pricing", icon: DollarSign, link: "/pricing" },
+    { name: "Pricing", icon: IndianRupee, link: "/pricing" },
     { name: "Leaderboard", icon: UserCheck, link: "/leaderboard" },
     { name: "Contact", icon: Mail, link: "/contact" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, url: "https://facebook.com" },
-    { icon: Twitter, url: "https://twitter.com" },
+    { icon: Youtube, url: "https://www.youtube.com/@PathPledgeTradingInstitute" },  
     { icon: Instagram, url: "https://www.instagram.com/tradingwithpathpledge/" },
     { icon: Linkedin, url: "https://www.linkedin.com/company/pathpledge/" },
   ];
@@ -98,7 +98,7 @@ const Footer = () => {
                 href="mailto:support@pathpledge.in"
                 className="hover:text-red-400 transition hover:underline"
               >
-                support@pathpledge.in
+                investmentsolutions@pathpledge.in
               </a>
             </div>
             <div className="flex items-start space-x-2">
@@ -111,14 +111,14 @@ const Footer = () => {
               </a>
             </div>
             <div className="flex items-start space-x-2">
-              <MapPin className="mt-1 text-white w-6 h-6" />
+              <MapPin className="mt-1 text-white w-16 h-10" />
               <a
                 href="https://www.google.com/maps/place/Pathpledge+Stock+Market+Academy/@21.2384348,81.6767633,17z/data=!3m1!4b1!4m6!3m5!1s0x3a28dd7961448eaf:0xc1cb16940a271afb!8m2!3d21.2384348!4d81.6793436!16s%2Fg%2F11xl6kk38f?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-red-400 transition hover:underline"
               >
-                Raipur Hybrid Center, Off No. 7030, Currency Tower, VIP Road, Raipur, Chhattisgarh 492013
+                Pathpledge Academy Center, Off No. 7030 7th floor, Currency Tower, VIP Road, Raipur, Chhattisgarh 492013
               </a>
             </div>
           </div>

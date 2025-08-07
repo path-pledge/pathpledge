@@ -3,7 +3,7 @@ import React from 'react'
 import WelcomeHero from '../../components/WelcomeHero';
 import Features from '../../components/Features';
 import DataScienceSection from '../../components/DataScienceSection';
-import WelcomeSection from '../../components/WelcomeSection';
+// import WelcomeSection from '../../components/WelcomeSection';
 // import StatsSection from '../../components/StatsSection';
 import WhyChooseUs from '../../components/WhyChooseUs';
 
@@ -12,6 +12,7 @@ import { OffshoreStaffSection } from '../../components/OffshoreStaffSection';
 import {BrochureDownloadSection} from '../../components/BrochureDownloadSection';
 import Leader from '../../components/Leader';
 import PhasesInPhone from '../../components/PhasesInPhone';
+import {TestimonialSection} from '../../components/TestimonialSection';
 
 
 
@@ -24,7 +25,8 @@ const Home = () => {
     <Features />
     <PhasesInPhone />
     <DataScienceSection />
-    <WelcomeSection />
+    {/* <WelcomeSection /> */}
+    <TestimonialSection />
   <BrochureDownloadSection />
     <WhyChooseUs />
     <OffshoreStaffSection />

@@ -1,6 +1,6 @@
 import React from "react";
 import { FiPhone } from "react-icons/fi";
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 
 const HeaderCTA = () => {
@@ -34,8 +34,8 @@ const HeaderCTA = () => {
 
           {/* Social Icons */}
           <div className="flex items-center gap-4 text-[#D9070A] text-xl">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebookF />
+            <a href="https://www.youtube.com/@PathPledgeTradingInstitute" target="_blank" rel="noopener noreferrer">
+              <FaYoutube />
             </a>
             <a href="https://www.instagram.com/tradingwithpathpledge/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />

@@ -25,29 +25,22 @@ const WelcomeHero = () => {
         <motion.img
           src={heroImg}
           alt="Trading Dashboard"
-          className="w-[95%] sm:w-[80%] md:w-[65%] lg:w-[50%] max-w-3xl object-contain mb-6 sm:mb-10"
+          className="w-[95%] sm:w-[80%] md:w-[75%] lg:w-[70%] max-w-3xl object-contain mb-6 sm:mb-10"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         />
 
         <motion.h1
-          className="text-3xl sm:text-4xl  md:text-5xl lg:text-6xl font-extrabold text-gray-800 mb-3 sm:mb-4 leading-tight px-2"
+          className="text-3xl sm:text-4xl  md:text-5xl lg:text-5xl font-extrabold text-gray-800 mb-3 sm:mb-4 leading-tight px-2"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-          Learn to trade in the most simplified way.
+         Level Up Your Trading Game-Live Market Practice, Proven Techniques, Real Impact.
         </motion.h1>
 
-        <motion.p
-          className="text-md font-bold text-justify sm:text-base md:text-lg text-gray-950 max-w-2xl mb-6 sm:mb-8 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-        >
-          PathPledge Academy is one of the leading stock market institutes. We offer a comprehensive range of courses designed to help you master the art of trading. 
-        </motion.p>
+        
 
         <motion.button
           onClick={handleEnrollClick}

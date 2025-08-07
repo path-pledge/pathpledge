@@ -7,8 +7,8 @@ const LeaderboardPage = () => {
     <div className="min-h-screen bg-gray-100 py-16  ">
       {/* Header */}
       <div className="text-center w-full bg-black py-10 mb-12">
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Leaderboard</h1>
-        <p className="text-white mt-1 text-sm sm:text-base">Home / Leaderboard</p>
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-white">Mentor</h1>
+        <p className="text-white mt-1 text-sm sm:text-base">Home / Mentor</p>
       </div>
 
       {/* Section 1: Ayush */}

@@ -13,21 +13,21 @@ const Features = () => {
   const cards = [
     {
       icon: <FaRobot size={40} className="text-red-500" />,
-      title: "Learn From Scratch",
+      title: "Money-Back Guarantee ",
       desc:
-        "Learn the basics of the stock market and progress to an in-depth understanding, acquiring the knowledge and skills needed to thrive in stock market trading.",
+        "We're so confident in our mentorship that you'll gain an edge over others; if you don’t find value, we'll refund you.",
     },
     {
       icon: <FaChartLine size={40} className="text-red-500" />,
-      title: "Revision Classes",
+      title: "1-on-1 Mentorship by Active SEBI-Registered Traders ",
       desc:
-        "Over 300+ revision classes to help you cover any topic you miss in your live class. You will never be left behind.",
+        "Benefit from exclusive 1-on-1 mentorship delivered by SEBI-registered traders with active market experience-gaining insights from practitioners, not just theoretical instructors.",
     },
     {
       icon: <FaChalkboardTeacher size={40} className="text-red-500" />,
-      title: "Live Q/A Session",
+      title: "	1 Lakh Funding ",
       desc:
-        "We have live Q&A sessions with Anish Singh Thakur, where students ask their queries directly to him.",
+        "Your success deserves a head start-get up to ₹1,00,000 in trading funds post-course. Test your skills in the live market without risking your own money.",
     },
   ];
 

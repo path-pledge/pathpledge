@@ -25,27 +25,12 @@ const DataScienceSection = () => {
             India's No. 1 Stock Market Course
           </p>
           <h2 className="text-4xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-            Trading With <span className="text-[#D9070A]">Data Science</span>
+            Your Trading Success is <br /> <span className="text-[#D9070A]">Our Commitment</span>
           </h2>
         </motion.div>
 
         {/* Layout */}
-        <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-12">
-          {/* 📸 Image */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-1 md:order-2 flex justify-center"
-          >
-            <img
-              src={promoImg3}
-              alt="AI-powered stock market course"
-              className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
-            />
-          </motion.div>
-
+        <div className="flex flex-col md:grid md:grid-cols-2 items-center gap-6">
           {/* 📄 Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -54,11 +39,11 @@ const DataScienceSection = () => {
             transition={{ duration: 0.8 }}
             className="order-2 md:order-1 space-y-5 text-center md:text-left"
           >
-            <p className="text-gray-950  text-base sm:text-lg md:text-xl leading-relaxed text-justify sm:text-center md:text-justify">
-              The Trading With Data Science Program aims to help you learn and apply the knowledge and skills of a professional trader, with the potential for profitable outcomes. It offers numerous strategies and price action techniques suitable for various financial markets and trading styles, including Indian stocks, futures & options, the foreign exchange market, and commodities, covering intraday and swing trading.
+            <p className="text-gray-950 text-base sm:text-lg md:text-xl leading-relaxed text-justify sm:text-center md:text-justify">
+              We don’t just teach-we transform. Our program is 100% results-driven, focused on helping you double your income potential rather than just completing a syllabus. With personalized attention for every trader, we provide tailored assignments, real-world tests, and continuous feedback to sharpen your skills.We go beyond theory, addressing your unique challenges at the grassroots level. Whether you're a beginner or looking to refine advanced strategies, our customized training approach ensures you get the exact guidance you need. Your success isn’t just a goal-it’s our commitment.
             </p>
             <p className="text-lg font-semibold text-[#D9070A]">
-              Enroll Now by just paying ₹3000
+              Enroll Now and start your journey to financial freedom!
             </p>
             <div className="flex justify-center md:justify-start">
               <button
@@ -68,6 +53,21 @@ const DataScienceSection = () => {
                 Enroll Now
               </button>
             </div>
+          </motion.div>
+
+          {/* 📸 Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="order-1 md:order-2 flex justify-center md:justify-end"
+          >
+            <img
+              src={promoImg3}
+              alt="AI-powered stock market course"
+              className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
+            />
           </motion.div>
         </div>
       </div>
