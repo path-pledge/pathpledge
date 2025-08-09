@@ -113,8 +113,8 @@ const ContactSection = React.forwardRef((props, ref) => {
                 <>
                   General Enquiry:
                   <br />
-                  <a href="mailto:info@pathpledge.in" className="text-[#D9070A] underline">
-                    info@pathpledge.in
+                  <a href="mailto:investmentsupport@pathpledge.in" className="text-[#D9070A] underline">
+                    investmentsupport@pathpledge.in
                   </a>
                 </>
               }

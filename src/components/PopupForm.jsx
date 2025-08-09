@@ -3,17 +3,19 @@ import logoWatermark from "../assets/logo.png";
 
 import { db } from "../firebase";
 import { collection, addDoc } from "firebase/firestore";
-// 👇 Add props here
-
 
 const PopupForm = ({ onClose, onSubmit }) => {
-  const [show, setShow] = useState(onClose ? true : false); // if manual, show immediately
+  const [show, setShow] = useState(onClose ? true : false);
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     phone: "",
   });
-  const [errors, setErrors] = useState({ phone: "" });
+  const [errors, setErrors] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+  });
 
   useEffect(() => {
     if (!onClose) {
@@ -24,6 +26,8 @@ const PopupForm = ({ onClose, onSubmit }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Live phone validation
     if (name === "phone") {
       const isValidPhone = /^\d{10}$/.test(value);
       setErrors((prev) => ({
@@ -36,13 +40,24 @@ const PopupForm = ({ onClose, onSubmit }) => {
       ...prev,
       [name]: value,
     }));
+
+    // Clear error on typing
+    if (value.trim() !== "") {
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const isValidPhone = /^\d{10}$/.test(formData.phone);
-    if (!isValidPhone) {
-      setErrors((prev) => ({ ...prev, phone: "Phone number must be exactly 10 digits." }));
+    let newErrors = {};
+
+    if (!formData.firstName.trim()) newErrors.firstName = "First name is required.";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last name is required.";
+    if (!/^\d{10}$/.test(formData.phone))
+      newErrors.phone = "Phone number must be exactly 10 digits.";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
       return;
     }
 
@@ -53,6 +68,7 @@ const PopupForm = ({ onClose, onSubmit }) => {
         createdAt: new Date(),
       });
 
+      // Trigger brochure download
       const brochureUrl = "/brochure.pdf";
       const link = document.createElement("a");
       link.href = brochureUrl;
@@ -62,7 +78,7 @@ const PopupForm = ({ onClose, onSubmit }) => {
       document.body.removeChild(link);
 
       if (onClose) {
-        onSubmit?.(); // ✅ close from parent if provided
+        onSubmit?.();
       } else {
         setShow(false);
       }
@@ -75,7 +91,7 @@ const PopupForm = ({ onClose, onSubmit }) => {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-50 bg-black bg-opacity-70 flex items-center justify-center">
+    <div className="fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
       <div
         className="relative w-[90%] max-w-[600px] rounded-3xl overflow-hidden shadow-xl bg-white"
         style={{
@@ -86,16 +102,18 @@ const PopupForm = ({ onClose, onSubmit }) => {
         }}
       >
         <div className="w-full h-full p-6 sm:p-10 bg-white/90 backdrop-blur text-gray-800 relative z-10 rounded-3xl">
+          {/* Close Button */}
           <button
             onClick={() => {
-              if (onClose) onClose(); // ✅ manual close
-              else setShow(false);    // ✅ auto close
+              if (onClose) onClose();
+              else setShow(false);
             }}
             className="absolute top-4 right-5 text-2xl font-bold text-gray-500 hover:text-red-500"
           >
             ✕
           </button>
 
+          {/* Heading */}
           <h2 className="text-2xl sm:text-3xl text-center font-extrabold text-[#D9070A] mb-2">
             Download Brochure
           </h2>
@@ -103,29 +121,52 @@ const PopupForm = ({ onClose, onSubmit }) => {
             Fill the form to download brochure and get a call back
           </p>
 
+          {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* Name Fields */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <input
-                type="text"
-                name="firstName"
-                value={formData.firstName}
-                onChange={handleChange}
-                placeholder="First Name"
-                className="flex-1 border px-4 py-2 rounded-md focus:outline-none"
-                required
-              />
-              <input
-                type="text"
-                name="lastName"
-                value={formData.lastName}
-                onChange={handleChange}
-                placeholder="Last Name"
-                className="flex-1 border px-4 py-2 rounded-md focus:outline-none"
-                required
-              />
+              <div className="flex-1">
+                <label className="block text-sm font-medium mb-1">
+                  First Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  placeholder="First Name"
+                  className="w-full border px-4 py-2 rounded-md focus:outline-none"
+                  required
+                />
+                {errors.firstName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.firstName}</p>
+                )}
+              </div>
+
+              <div className="flex-1">
+                <label className="block text-sm font-medium mb-1">
+                  Last Name <span className="text-red-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  placeholder="Last Name"
+                  className="w-full border px-4 py-2 rounded-md focus:outline-none"
+                  required
+                />
+                {errors.lastName && (
+                  <p className="text-red-500 text-sm mt-1">{errors.lastName}</p>
+                )}
+              </div>
             </div>
 
+            {/* Phone Field */}
             <div className="flex flex-col">
+              <label className="block text-sm font-medium mb-1">
+                Phone Number <span className="text-red-500">*</span>
+              </label>
               <input
                 type="tel"
                 name="phone"
@@ -136,10 +177,11 @@ const PopupForm = ({ onClose, onSubmit }) => {
                 required
               />
               {errors.phone && (
-                <p className="text-yellow-600 text-sm mt-1">{errors.phone}</p>
+                <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
 
+            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-[#D9070A] text-white font-bold py-3 rounded-md hover:bg-[#b30506] transition"

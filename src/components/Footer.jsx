@@ -39,7 +39,7 @@ const Footer = () => {
     { name: "Home", icon: Home, link: "/" },
     { name: "Programs", icon: Book, link: "/programs" },
     { name: "Pricing", icon: IndianRupee, link: "/pricing" },
-    { name: "Leaderboard", icon: UserCheck, link: "/leaderboard" },
+    { name: "Our Mentors", icon: UserCheck, link: "/leaderboard" },
     { name: "Contact", icon: Mail, link: "/contact" },
   ];
 
@@ -176,7 +176,7 @@ const Footer = () => {
       <div className="border-t border-gray-600 mt-12">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-white text-sm font-serif">
           <span>© {new Date().getFullYear()} PathPledge. All Rights Reserved.</span>
-          <span className="mt-2 sm:mt-0">Designed by Amit Virat</span>
+          
         </div>
       </div>
     </footer>

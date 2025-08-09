@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaRobot, FaChartLine, FaChalkboardTeacher } from "react-icons/fa";
+
+import { GiTakeMyMoney } from "react-icons/gi";
+import { MdAppRegistration } from "react-icons/md";
+import { SiGofundme } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 
 const Features = () => {
@@ -12,19 +15,19 @@ const Features = () => {
 
   const cards = [
     {
-      icon: <FaRobot size={40} className="text-red-500" />,
+      icon: <GiTakeMyMoney size={40} className="text-red-500" />,
       title: "Money-Back Guarantee ",
       desc:
         "We're so confident in our mentorship that you'll gain an edge over others; if you don’t find value, we'll refund you.",
     },
     {
-      icon: <FaChartLine size={40} className="text-red-500" />,
+      icon: <MdAppRegistration size={40} className="text-red-500" />,
       title: "1-on-1 Mentorship by Active SEBI-Registered Traders ",
       desc:
         "Benefit from exclusive 1-on-1 mentorship delivered by SEBI-registered traders with active market experience-gaining insights from practitioners, not just theoretical instructors.",
     },
     {
-      icon: <FaChalkboardTeacher size={40} className="text-red-500" />,
+      icon: <SiGofundme size={40} className="text-red-500" />,
       title: "	1 Lakh Funding ",
       desc:
         "Your success deserves a head start-get up to ₹1,00,000 in trading funds post-course. Test your skills in the live market without risking your own money.",
