@@ -3,21 +3,21 @@ import React from "react";
 const plans = [
   {
     title: "Demo",
-    price: "Free",
+   
     description:
       "For the financial basics - everything you need for better money management in one place. Sending money abroad or sticking to a budget has never been easier.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Demo%20plan.",
   },
   {
     title: "Phase 1",
-    price: "₹3,000 /month",
+    
     description:
       "For the smart spender - access additional benefits like better limits for spending, and insurance for your purchases, on our affordable paid plan.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Phase%201%20plan.%20Please%20share%20details.",
   },
   {
     title: "Phase 2",
-    price: "₹7,999 /month",
+    
     description:
       "For elevating every day - access exclusive subscriptions, better savings rates, and exchange unlimited amounts of money.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20want%20to%20know%20more%20about%20the%20Phase%202%20plan.",
@@ -43,7 +43,7 @@ const PlanSection = () => {
             >
               <div>
                 <h3 className="text-xl font-bold mb-1">{plan.title}</h3>
-                <p className="text-lg font-semibold mb-4">{plan.price}</p>
+                {/* <p className="text-lg font-semibold mb-4">{plan.price}</p> */}
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {plan.description}
                 </p>

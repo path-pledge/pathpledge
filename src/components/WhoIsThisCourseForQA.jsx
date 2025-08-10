@@ -29,9 +29,9 @@ const WhoIsThisCourseForQA = () => {
           transition={{ duration: 0.8 }}
           className="text-4xl sm:text-5xl md:text-5xl font-extrabold text-center mb-8"
         >
-          Who is this <span className="text-[#FF4C4C]">Course For</span>?
+          Who Will Benefit from This <span className="text-[#FF4C4C]">Trading Program</span>?
         </motion.h2>
-
+ 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

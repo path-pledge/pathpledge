@@ -34,8 +34,9 @@ const PhasesInPhone = () => {
       {/* Heading Section */}
       <div className="max-w-6xl mx-auto text-center px-2 sm:px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-gray-800 leading-tight">
-         Our <span className="text-[#D9070A]">lifetime mentorship</span> is designed to take you on a structured learning journey through the stock market, divided into two key phases:
+         Our <span className="text-[#D9070A]">hybrid trading course</span> with lifetime mentorship is designed to take you on a structured learning journey through the stock market, divided into two key phases:
         </h2>
+      
         
       </div>
 

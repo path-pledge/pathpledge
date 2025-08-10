@@ -30,7 +30,12 @@ const InformationSection = () => {
       description: (
         <>
           Send the screenshot of successful payment on WhatsApp Number{' '}
-          <a href="https://wa.me/919340210770" target="_blank" rel="noopener noreferrer" className="text-[#D9070A] hover:underline">
+          <a
+            href="https://wa.me/919340210770"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#D9070A] hover:underline"
+          >
             (+91-9340210770)
           </a>
         </>
@@ -55,11 +60,7 @@ const InformationSection = () => {
     >
       {/* ✅ Background Image on small screens only */}
       <div className="md:hidden absolute inset-0 z-0">
-        <img
-          src={ami}
-          alt="Background"
-          className="w-full h-full object-cover"
-        />
+        <img src={ami} alt="Background" className="w-full h-full object-cover" />
       </div>
 
       {/* ✅ Content Block */}
@@ -77,15 +78,33 @@ const InformationSection = () => {
               </div>
             </div>
           ))}
+
+          {/* ✅ Apply Now button for mobile */}
+          <div className="md:hidden text-center mt-6">
+            <a
+              href="https://docs.google.com/forms/d/1UjZ_zWdRDqOBV8GKo_SGtt9d-eoXMoGjJxMa7hMMeyM/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-red-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-red-600 transition"
+            >
+              Apply Now
+            </a>
+          </div>
         </div>
 
-        {/* Right-side Image only on md+ */}
+        {/* ✅ Clickable image for desktop */}
         <div className="hidden md:flex md:w-1/2 items-center justify-center">
-          <img
-            src={ami}
-            alt="Information Illustration"
-            className="w-full max-w-md h-auto rounded-full bg-orange-100"
-          />
+          <a
+            href="https://docs.google.com/forms/d/1UjZ_zWdRDqOBV8GKo_SGtt9d-eoXMoGjJxMa7hMMeyM/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={ami}
+              alt="Information Illustration"
+              className="w-full max-w-md h-auto rounded-full bg-orange-100 cursor-pointer hover:scale-105 transition-transform duration-300"
+            />
+          </a>
         </div>
       </div>
     </motion.section>

@@ -1,11 +1,11 @@
 import React from 'react';
-import zerodhaImage from '../assets/Z.svg';
-import upstoxImage from '../assets/up.svg';
+import fyersImage from '../assets/fyers.png';
+
 
 const Resources = () => {
   const brokers = [
-    { name: 'Zerodha', src: zerodhaImage, link: 'https://bit.ly/3gyhIWN' },
-    { name: 'Upstox', src: upstoxImage, link: 'https://upstox.com' },
+    { name: 'Fyers', src: fyersImage, link: 'https://fyers.in' },
+    
   ];
 
   return (
@@ -20,7 +20,7 @@ const Resources = () => {
           Recommended Brokers for Stock Market
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-10 max-w-3xl mx-auto">
           {brokers.map((broker) => (
             <div
               key={broker.name}
@@ -30,7 +30,7 @@ const Resources = () => {
                 <img
                   src={broker.src}
                   alt={`${broker.name} Logo`}
-                  className="h-12 w-auto"
+                  className="h-20 w-auto"
                   loading="lazy"
                 />
               </div>
