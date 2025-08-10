@@ -1,23 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const plans = [
   {
     title: "Demo",
-   
     description:
       "For the financial basics - everything you need for better money management in one place. Sending money abroad or sticking to a budget has never been easier.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Demo%20plan.",
   },
   {
     title: "Phase 1",
-    
     description:
       "For the smart spender - access additional benefits like better limits for spending, and insurance for your purchases, on our affordable paid plan.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Phase%201%20plan.%20Please%20share%20details.",
   },
   {
     title: "Phase 2",
-    
     description:
       "For elevating every day - access exclusive subscriptions, better savings rates, and exchange unlimited amounts of money.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20want%20to%20know%20more%20about%20the%20Phase%202%20plan.",
@@ -34,16 +32,20 @@ const PlanSection = () => {
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, index) => (
-            <a
+            <motion.a
               key={index}
               href={plan.link}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label={`Learn more about ${plan.title} plan`}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
               className="group bg-white text-[#D9070A] p-6 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <h3 className="text-xl font-bold mb-1">{plan.title}</h3>
-                {/* <p className="text-lg font-semibold mb-4">{plan.price}</p> */}
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {plan.description}
                 </p>
@@ -53,7 +55,7 @@ const PlanSection = () => {
                   →
                 </span>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>
