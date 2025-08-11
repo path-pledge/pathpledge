@@ -5,19 +5,19 @@ const plans = [
   {
     title: "Demo",
     description:
-      "For the financial basics - everything you need for better money management in one place. Sending money abroad or sticking to a budget has never been easier.",
+      "Get a sneak peek into the world of trading with our free demo session. Understand market basics, explore live trading examples, and see how PathPledge’s unique approach can help you trade smarter. Perfect for those curious about how the markets work before committing to a course.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Demo%20plan.",
   },
   {
     title: "Phase 1",
     description:
-      "For the smart spender - access additional benefits like better limits for spending, and insurance for your purchases, on our affordable paid plan.",
+      "Build a strong foundation in trading and investing. Learn essential concepts like market structure, types of orders, risk management, and reading charts. By the end of this phase, you’ll confidently understand how trades work, recognize opportunities, and manage risks effectively.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20am%20interested%20in%20the%20Phase%201%20plan.%20Please%20share%20details.",
   },
   {
     title: "Phase 2",
     description:
-      "For elevating every day - access exclusive subscriptions, better savings rates, and exchange unlimited amounts of money.",
+      "Step into the advanced league with professional strategies and real market practice. Master institutional trading techniques, advanced chart patterns, algorithmic insights, and high-probability setups. Trade live alongside experts and refine your skills to consistently identify and execute profitable trades.",
     link: "https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20want%20to%20know%20more%20about%20the%20Phase%202%20plan.",
   },
 ];
@@ -46,7 +46,7 @@ const PlanSection = () => {
             >
               <div>
                 <h3 className="text-xl font-bold mb-1">{plan.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-md leading-relaxed">
                   {plan.description}
                 </p>
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import AyushImage from "../assets/ayushphoto.jpg";
-import BhushanImage from "../assets/7.jpg";
+import BhushanImage from "../assets/bhushan1.jpg";
 
 const LeaderboardPage = () => {
   return (
@@ -42,14 +42,14 @@ const LeaderboardPage = () => {
             it’s about making smart moves, managing risk, and winning consistently.”
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 text-right mt-6">-Ayush Patel</h2>
-          <h3 className="text-base sm:text-lg font-bold text-[#D9070A] text-right">Founder, PathPledge</h3>
+          <h3 className="text-base sm:text-lg font-bold text-[#D9070A] text-right">Co-Founder, PathPledge</h3>
         </div>
         <div className="relative flex justify-center items-center">
           <div className="absolute w-64 h-84 sm:w-80 sm:h-80 rounded-full bg-[#D9070A] opacity-30 blur-3xl animate-pulse"></div>
           <img
             src={AyushImage}
             alt="Ayush"
-            className="relative rounded-xl w-64 h-84 sm:w-72 sm:h-200 object-cover shadow-2xl"
+            className="relative rounded-xl w-64 h-84 sm:w-72 sm:h-170 object-cover shadow-2xl"
           />
         </div>
       </div>
@@ -83,14 +83,14 @@ const LeaderboardPage = () => {
             performance-driven trading incubator for the next generation of market leaders.
           </p>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-800 mt-6">-Bhushan Thakre</h2>
-          <h3 className="text-base sm:text-lg font-bold text-[#D9070A]">Trading Strategist & Educator</h3>
+          <h3 className="text-base sm:text-lg font-bold text-[#D9070A]">Co-Founder, PathPledge</h3>
         </div>
         <div className="relative flex justify-center items-center">
           <div className="absolute w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-[#d9070a] opacity-30 blur-3xl animate-pulse"></div>
           <img
             src={BhushanImage}
             alt="Bhushan Thakre"
-            className="relative rounded-xl w-64 h-64 sm:w-72 sm:h-200 object-cover shadow-2xl"
+            className="relative rounded-xl w-64 h-64 sm:w-72 sm:h-140 object-cover shadow-2xl"
           />
         </div>
       </div>

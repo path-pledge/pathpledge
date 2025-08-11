@@ -75,21 +75,23 @@ const InformationSection = () => {
               <div>
                 <h2 className="text-xl font-bold text-gray-800">{step.title}</h2>
                 <p className="text-gray-700">{step.description}</p>
+
+                {/* ✅ Button only under Register & Enrollment step */}
+                {step.title === 'Register & Enrollment' && (
+                  <div className="text-start mt-4">
+                    <a
+                      href="https://docs.google.com/forms/d/1UjZ_zWdRDqOBV8GKo_SGtt9d-eoXMoGjJxMa7hMMeyM/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-red-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-red-600 transition"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
-
-          {/* ✅ Apply Now button for mobile */}
-          <div className="md:hidden text-center mt-6">
-            <a
-              href="https://docs.google.com/forms/d/1UjZ_zWdRDqOBV8GKo_SGtt9d-eoXMoGjJxMa7hMMeyM/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-red-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-red-600 transition"
-            >
-              Apply Now
-            </a>
-          </div>
         </div>
 
         {/* ✅ Clickable image for desktop */}

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import heroImg from "../assets/h111.png";
-import bgImg from "../assets/b1.jpg";
+import bgImg from "../assets/hero.jpg";
 import { motion } from "framer-motion";
 
 const WelcomeHero = () => {

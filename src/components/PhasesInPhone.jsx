@@ -8,23 +8,20 @@ const PhasesInPhone = () => {
       label: "Phase 1:",
       title: "The Fundamentals",
       items: [
-        "Understanding stock markets & terminologies",
-        "How to read price charts & candlestick patterns",
-        "Basics of technical & fundamental analysis",
-        "Introduction to trading platforms & order types",
-        "Risk management & psychology for beginners",
-        "Live market observation & basic trade execution",
+        "Stock Market Basics.",
+        "Fundamental Analysis.",
+        "Investment Strategies.",
+        "Traditional Price Action.",
       ],
     },
     {
       label: "Phase 2:",
       title: "Advanced Techniques",
       items: [
-        "Advanced technical analysis (indicators, patterns, trends)",
-        "Derivatives trading (F&O strategies)",
-        "Swing trading & positional trading approaches",
-        "Algorithmic trading concepts & tools",
-        "Live Market Trading",
+        "Options Masterclass.",
+        "Roadmap to Profitability.",
+        "Institutional Trading Strategies.",
+        "Understanding Advanced Inducement and Liquidity.",
       ],
     },
   ];
@@ -33,7 +30,7 @@ const PhasesInPhone = () => {
     <div className="bg-gray-100 flex flex-col items-center justify-center py-10 px-4">
       {/* Heading Section */}
       <div className="max-w-6xl mx-auto text-center px-2 sm:px-4">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-gray-800 leading-tight">
+        <h2 className="text-3xl sm:text-3xl md:text-3xl font-extrabold mb-4 text-gray-800 leading-tight">
          Our <span className="text-[#D9070A]">hybrid trading course</span> with lifetime mentorship is designed to take you on a structured learning journey through the stock market, divided into two key phases:
         </h2>
       
@@ -55,19 +52,20 @@ const PhasesInPhone = () => {
   }}
 >
   {/* Perfect fit inside the screen area of phone */}
-  <div className="absolute top-[72px] left-[28px] w-[244px] h-[356px] overflow-y-auto px-12 pt-2 pb-3 text-center flex flex-col items-center justify-start">
-    <div className="text-[#D9070A] font-bold text-[20px] mb-1">
-      {phase.label}
-    </div>
-    <div className="text-black font-bold text-[16px] mb-2 leading-snug">
-      {phase.title}
-    </div>
-    <ul className="text-gray-800 font-semibold text-[12px] list-disc list-inside text-left space-y-[4px] pr-1">
-      {phase.items.map((item, i) => (
-        <li key={i}>{item}</li>
-      ))}
-    </ul>
+  <div className="absolute top-[72px] left-[34px] w-[234px] h-[356px] overflow-y-auto px-6 pt-4 pb-3 text-center flex flex-col items-center justify-center gap-3">
+  <div className="text-[#D9070A] font-bold text-[20px]">
+    {phase.label}
   </div>
+  <div className="text-black font-bold text-[16px] leading-snug">
+    {phase.title}
+  </div>
+  <ul className="text-gray-800 font-semibold text-[11px] list-disc list-inside text-left space-y-3 break-words">
+    {phase.items.map((item, i) => (
+      <li key={i}>{item}</li>
+    ))}
+  </ul>
+</div>
+
 </motion.div>
 
 
