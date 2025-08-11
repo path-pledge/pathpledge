@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import fyersImage from '../assets/fyers.png';
+import fyersImage from '../assets/fyers2.png';
 
 const Resources = () => {
   const brokers = [
