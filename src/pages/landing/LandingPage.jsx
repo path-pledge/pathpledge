@@ -34,6 +34,7 @@ import { db } from '../../firebase'; // Corrected import path for your firebase.
 import { collection, addDoc } from 'firebase/firestore';
 import { FAQSection1 } from '../../components/FAQSection1';
 import PremiumWebinarSection from '../../components/PremiumWebinarSection';
+import Features from '../../components/Features';
 
 
 
@@ -226,7 +227,7 @@ const LandingPage = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-[#D9070A] text-white font-bold py-4 px-8 rounded-xl text-xl md:text-xl shadow-lg transition-all duration-300 ease-in-out transform inline-block border border-transparent hover:border-white animate-slide-up-4"
             >
-              Claim Your FREE Trading Masterclass!
+              Claim Your FREE Demo Masterclass!
             </motion.a>
             {/* --- End of Button reposition --- */}
           </div>
@@ -250,7 +251,9 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 md:px-8 bg-white section-fade-in">
+      <Features />
+
+      {/* <section className="py-16 px-4 md:px-8 bg-white section-fade-in">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10 font-serif">
             Why PathPledge?
@@ -285,7 +288,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-16 px-4 md:px-8 bg-gray-100 section-fade-in">
         <div className="max-w-7xl mx-auto text-center">

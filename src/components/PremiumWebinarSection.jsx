@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Calendar, Video, CheckCircle } from 'lucide-react';
-import img from '../assets/16.jpg'; // Replace with your speaker image path
+import img from '../assets/ayushphoto.jpg'; // Replace with your speaker image path
 
 const speaker = {
   name: "Ayush Patel",
@@ -68,12 +68,12 @@ const PremiumWebinarSection = () => {
               className="mt-6 text-gray-300 text-lg"
               variants={itemVariants}
             >
-              Learn powerful trading strategies, risk control, and mindset secrets from expert mentors — even if you're just starting!
+              Learn powerful trading strategies, risk control, and mindset secrets from expert mentors-even if you're just starting!
             </motion.p>
             <motion.div className="mt-8 space-y-4" variants={itemVariants}>
               <div className="flex items-center">
                 <Calendar className="w-6 h-6 text-red-400" />
-                <span className="ml-4 text-lg font-semibold">Wednesday, 6th Aug | 11:00 AM</span>
+                <span className="ml-4 text-lg font-semibold">Sunday, 17th Aug | 11:00 AM</span>
               </div>
               <div className="flex items-center">
                 <Video className="w-6 h-6 text-red-400" />
@@ -94,7 +94,7 @@ const PremiumWebinarSection = () => {
       ₹
     </div>
     <span className="text-lg sm:text-xl font-bold">
-      Join Now for Just ₹1
+      Join Now for Free Demo Class
     </span>
   </div>
 </motion.div>
@@ -109,7 +109,7 @@ const PremiumWebinarSection = () => {
               <img
                 src={speaker.imageUrl}
                 alt={speaker.name}
-                className="w-16 h-16 rounded-full shadow-md object-cover"
+                className="w-15 h-20 rounded-full shadow-md object-cover"
                 onError={(e) => {
                   e.target.onerror = null;
                   e.target.src = 'https://placehold.co/128x128/E2E8F0/4A5568?text=Error';
