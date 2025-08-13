@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 import { GiTakeMyMoney } from "react-icons/gi";
 import { MdAppRegistration } from "react-icons/md";
 import { SiGofundme } from "react-icons/si";
@@ -15,30 +14,33 @@ const Features = () => {
 
   const cards = [
     {
-      icon: <GiTakeMyMoney size={40} className="text-red-500" />,
-      title: "Money-Back Guarantee ",
+      icon: <GiTakeMyMoney size={40} className="text-red-500" aria-label="Money-back guarantee for trading course" />,
+      title: "Money-Back Guarantee",
       desc:
-        "We're so confident in our mentorship that you'll gain an edge over others; if you don’t find value, we'll refund you.",
+        "We’re so confident in our mentorship that you'll gain an edge over others. If you don’t find value in our Raipur-based stock market course, we’ll refund you in full.",
     },
     {
-      icon: <MdAppRegistration size={40} className="text-red-500" />,
-      title: "1-on-1 Mentorship by Active SEBI-Registered Traders ",
+      icon: <MdAppRegistration size={40} className="text-red-500" aria-label="One-on-one mentorship by SEBI-registered traders" />,
+      title: "1-on-1 Mentorship by Active SEBI-Registered Traders",
       desc:
-        "Benefit from exclusive 1-on-1 mentorship delivered by SEBI-registered traders with active market experience-gaining insights from practitioners, not just theoretical instructors.",
+        "Get exclusive one-on-one mentorship from SEBI-registered traders in Raipur, learning proven stock market strategies directly from market experts.",
     },
     {
-      icon: <SiGofundme size={40} className="text-red-500" />,
-      title: "	1 Lakh Funding ",
+      icon: <SiGofundme size={40} className="text-red-500" aria-label="₹1 Lakh trading fund support" />,
+      title: "1 Lakh Funding",
       desc:
-        "Your success deserves a head start-get up to ₹1,00,000 in trading funds post-course. Test your skills in the live market without risking your own money.",
+        "After completing our best trading course in Raipur, get up to ₹1,00,000 in trading funds. Practice in the live market without risking your own money.",
     },
   ];
 
   return (
     <section className="w-full bg-gray-100 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Heading */}
-       
+        
+        {/* SEO-friendly section heading */}
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-12">
+          Why Choose PathPledge Academy – Best Trading Courses 
+        </h2>
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -60,9 +62,10 @@ const Features = () => {
               </p>
               <button
                 onClick={handleStartNow}
+                aria-label="Start learning stock market with PathPledge Academy in Raipur"
                 className="text-[#D9070A] font-semibold hover:scale-105 transition-all duration-300 hover:underline"
               >
-                Start Now!
+                Start Now
               </button>
             </motion.div>
           ))}

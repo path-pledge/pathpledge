@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import contactHeroImg from "../assets/C11.jpg";
+import contactHeroImg from "../assets/hero.jpg";
 
 const ContactHero = () => {
   const openWhatsApp = () => {
