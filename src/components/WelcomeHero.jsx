@@ -74,7 +74,7 @@ const WelcomeHero = () => {
 
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
 
-        <div className="relative z-20 flex flex-col items-center text-center max-w-6xl">
+        <div className="relative z-20 flex flex-col items-center text-center max-w-7xl">
           <motion.img
             src={heroImg}
             alt="Best trading courses in Raipur-Live market training"

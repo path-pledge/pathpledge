@@ -34,14 +34,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-[56px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+    <nav className="fixed top-[56px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300 overflow-x-clip">
+      <div className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative box-border">
         {/* Logo */}
         <Link to="/">
-  <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
-    PathPledge
-  </div>
-</Link>
+          <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
+            PathPledge
+          </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex gap-8 text-[18px] font-semibold text-black">
@@ -75,7 +75,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Scroll Progress Bar (Navbar ke neeche) */}
+      {/* Scroll Progress Bar */}
       <motion.div
         className="h-[3px] bg-gradient-to-r from-orange-500 to-red-600 w-full"
         style={{ width: `${scrollProgress}%` }}
