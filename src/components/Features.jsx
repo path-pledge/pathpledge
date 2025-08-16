@@ -39,7 +39,7 @@ const Features = () => {
         
         {/* SEO-friendly section heading */}
         <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 text-center mb-12">
-          Why Choose PathPledge Academy – Best Trading Courses 
+          Why Choose PathPledge Academy-Best Trading Courses 
         </h2>
 
         {/* Cards */}

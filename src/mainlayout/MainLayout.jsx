@@ -8,13 +8,13 @@ import HeaderCTA from '../components/HeaderCTA';
 
 const MainLayout = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
     <HeaderCTA />
       <Navbar />
     <PopupForm />
       <Outlet />
       <Footer />
-    </>
+    </div>
   );
 };
 

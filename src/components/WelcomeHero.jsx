@@ -65,7 +65,7 @@ const WelcomeHero = () => {
         </script>
       </Helmet>
 
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-22 md:py-14  overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-18 md:py-18  overflow-hidden">
         <img
           src={bgImg}
           alt="Stock market institute in Raipur background"
@@ -74,18 +74,18 @@ const WelcomeHero = () => {
 
         <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
 
-        <div className="relative z-20 flex flex-col items-center text-center max-w-7xl">
+        <div className="relative z-20 flex flex-col items-center text-center max-w-4xl">
           <motion.img
             src={heroImg}
             alt="Best trading courses in Raipur-Live market training"
-            className="w-[95%] sm:w-[80%] md:w-[75%] lg:w-[70%] max-w-3xl object-contain mb-6 sm:mb-10"
+            className="w-[85%] sm:w-[40%] md:w-[70%] lg:w-[60%] max-w-3xl object-contain mt-14 sm:mt-14"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           />
 
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight px-2"
+            className="text-3xl  sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}

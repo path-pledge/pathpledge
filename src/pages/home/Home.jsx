@@ -30,11 +30,7 @@ const Home = () => {
   <BrochureDownloadSection />
     <WhyChooseUs />
     <OffshoreStaffSection />
-
     <FAQSection />
-    
-    
-  
     
     </div>
   )

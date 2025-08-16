@@ -34,11 +34,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-[60px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300 overflow-x-clip">
+    <nav className="fixed top-[52px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300 overflow-x-clip">
       <div className="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative box-border">
         {/* Logo */}
         <Link to="/">
-          <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
+          <div className="text-4xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
             PathPledge
           </div>
         </Link>

@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const HeaderCTA = () => {
   return (
-    <section className="sticky top-0 z-[60] bg-white shadow-sm">
-      <div className="w-full px-4 md:px-10 py-3 overflow-x-auto">
+    <section className="fixed w-full top-0 z-[60] bg-white shadow-sm">
+      <div className="w-full px-4 md:px-10 py-2 overflow-x-auto">
         <div className="max-w-6xl mx-auto flex items-center justify-between gap-4 whitespace-nowrap">
           
           {/* Phone Numbers */}
