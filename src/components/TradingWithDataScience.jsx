@@ -11,7 +11,7 @@ const TradingWithDataScience = () => {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-black text-white flex items-center min-h-[85vh] md:h-[90vh]  md:mt-14 ">
+     <section className="relative w-full overflow-hidden bg-black text-white flex items-center min-h-[85vh] md:h-[90vh] mt-[80px]">
       
       {/* ✅ Image - background on small, right side on md+ */}
       <motion.img
@@ -38,7 +38,7 @@ const TradingWithDataScience = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl  sm:text-gray-800 sm:text-4xl md:text-5xl font-extrabold leading-tight mb-4 sm:mb-6"
+          className="text-4xl  sm:text-white-800 sm:text-4xl md:text-5xl font-extrabold leading-tight mt-18 sm:mt-20"
         >
           FAST-TRACK YOUR TRADING WITH HIGH IMPACT LEARNING IN JUST 3 MONTHS
         </motion.h1>

@@ -8,7 +8,7 @@ import ContactSection from '../../components/ContactSection'
 const Pricing = () => {
   return (
   <div>
-    <div className="mt-16" >
+    <div className="mt-[100px]" >
       <PricingPage />
     </div>
     <PlanSection />

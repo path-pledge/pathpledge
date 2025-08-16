@@ -43,7 +43,7 @@ import {FAQSection} from "../../components/FAQSection";
 // };
 const LeaderPage = () => {
   return (
-    <div>
+    <div className="mt-[64px]">
       <LeaderboardPage />
       {/* <Leader data={leaderboardData} /> */}
       <FAQSection />

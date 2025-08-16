@@ -5,7 +5,7 @@ import ContactHero from '../../components/ContactHero';
 
 const Contact = () => {
   return (
-    <div>
+    <div className="mt-10">
       <ContactHero />
       <ContactSection />
       <ContactEnhancementsSection />
