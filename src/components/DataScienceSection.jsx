@@ -11,7 +11,10 @@ const DataScienceSection = () => {
   };
 
   return (
-    <section className="w-full bg-gray-100 py-16 px-6 text-black">
+    <section
+      className="w-full bg-gray-100 py-16 px-6 text-black"
+      aria-labelledby="stock-market-course-heading"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Heading & Subtext */}
         <motion.div
@@ -21,11 +24,15 @@ const DataScienceSection = () => {
           transition={{ duration: 0.8 }}
           className="mb-4 text-center md:text-left"
         >
-          <p className="text-sm font-bold text-[#D9070A] uppercase tracking-wide">
-            India's No. 1 Stock Market Course
-          </p>
-          <h2 className="text-4xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-            Your Trading Success is <br /> <span className="text-[#D9070A]">Our Commitment</span>
+          <h3 className="text-sm font-bold text-[#D9070A] uppercase tracking-wide">
+            India&apos;s No. 1 Stock Market Course
+          </h3>
+          <h2
+            id="stock-market-course-heading"
+            className="text-4xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight"
+          >
+            Your Trading Success is <br />{" "}
+            <span className="text-[#D9070A]">Our Commitment</span>
           </h2>
         </motion.div>
 
@@ -40,7 +47,13 @@ const DataScienceSection = () => {
             className="order-2 md:order-1 space-y-5 text-center md:text-left"
           >
             <p className="text-gray-950 text-base sm:text-lg md:text-xl leading-relaxed text-justify sm:text-center md:text-justify">
-              We don’t just teach-we transform. Our program is 100% results-driven, focused on helping you double your income potential rather than just completing a syllabus. With personalized attention for every trader, we provide tailored assignments, real-world tests, and continuous feedback to sharpen your skills.We go beyond theory, addressing your unique challenges at the grassroots level. Whether you're a beginner or looking to refine advanced strategies, our customized training approach ensures you get the exact guidance you need. Your success isn’t just a goal-it’s our commitment.
+              At <strong>PathPledge Trading Institute</strong>, we don’t just teach-we transform. 
+              Our <strong>stock market training program</strong> is 100% results-driven, focused on 
+              helping you maximize your income potential with practical strategies. 
+              Every student receives <em>personalized attention</em>, hands-on assignments, 
+              and real-world trading tests designed to sharpen skills. Whether you&apos;re a 
+              beginner or an advanced trader, our <strong>best stock market course in India</strong> 
+              {' '} ensures you gain the exact guidance you need to succeed.
             </p>
             <p className="text-lg font-semibold text-[#D9070A]">
               Enroll Now and start your journey to financial freedom!
@@ -48,6 +61,7 @@ const DataScienceSection = () => {
             <div className="flex justify-center md:justify-start">
               <button
                 onClick={handleEnrollClick}
+                aria-label="Enroll now in India's No.1 Stock Market Course"
                 className="px-8 py-3 rounded-md text-white font-semibold bg-[#D9070A] hover:bg-gray-900 transition duration-300 shadow-lg"
               >
                 Enroll Now
@@ -65,7 +79,8 @@ const DataScienceSection = () => {
           >
             <img
               src={promoImg3}
-              alt="AI-powered stock market course"
+              loading="lazy"
+              alt="Stock Market Course in India - PathPledge Trading Institute offering AI-powered trading education"
               className="w-full max-w-sm sm:max-w-md md:max-w-full object-contain"
             />
           </motion.div>

@@ -73,7 +73,7 @@ const testimonials = [
     image: ninth,
   },
   {
-    name: "Yāda Dārling143",
+    name: "Yādav Dhruv143",
     message:
       "Ayush Sir teaches everything clearly, including psychology and real life problems. It's an amazing course!",
     image: tenth,

@@ -65,7 +65,7 @@ const WelcomeHero = () => {
         </script>
       </Helmet>
 
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-22 md:py-14 lg:py-24 overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-22 md:py-14  overflow-hidden">
         <img
           src={bgImg}
           alt="Stock market institute in Raipur background"

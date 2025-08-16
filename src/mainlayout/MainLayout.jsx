@@ -9,9 +9,9 @@ import HeaderCTA from '../components/HeaderCTA';
 const MainLayout = () => {
   return (
     <>
-    <PopupForm />
     <HeaderCTA />
       <Navbar />
+    <PopupForm />
       <Outlet />
       <Footer />
     </>

@@ -34,8 +34,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-[56px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300 overflow-x-clip">
-      <div className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center relative box-border">
+    <nav className="fixed top-[60px] left-0 w-full z-50 bg-white shadow-md backdrop-blur-lg transition-all duration-300 overflow-x-clip">
+      <div className="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative box-border">
         {/* Logo */}
         <Link to="/">
           <div className="text-3xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
@@ -44,7 +44,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex gap-8 text-[18px] font-semibold text-black">
+        <ul className="hidden md:flex gap-6 text-[18px] font-semibold text-black">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
