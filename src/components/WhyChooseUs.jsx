@@ -31,13 +31,13 @@ const PathPledgeIntro = () => {
             streetAddress: "Raipur, Chhattisgarh",
             addressLocality: "Raipur",
             addressRegion: "CG",
-            addressCountry: "India"
+            addressCountry: "India",
           },
           sameAs: [
             "https://www.facebook.com/pathpledge",
             "https://www.instagram.com/pathpledge",
-            "https://www.linkedin.com/company/pathpledge"
-          ]
+            "https://www.linkedin.com/company/pathpledge",
+          ],
         })}
       </script>
 
@@ -59,6 +59,22 @@ const PathPledgeIntro = () => {
             Best Stock Market Institute in{" "}
             <span className="text-[#D9070A]">Raipur - PathPledge Academy</span>
           </h1>
+
+          {/* ✅ Small Screen Image (after heading) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-6 lg:hidden"
+          >
+            <img
+              src={pathpledgeLogo}
+              alt="Best Stock Market Academy in Raipur - PathPledge"
+              className="w-full max-w-xs sm:max-w-sm md:max-w-md rounded-xl shadow-lg"
+              loading="lazy"
+            />
+          </motion.div>
 
           {/* ✅ Optimized Paragraph */}
           <p className="text-black text-md md:text-xl leading-relaxed text-justify lg:mx-0 mb-6">
@@ -104,7 +120,7 @@ const PathPledgeIntro = () => {
           </button>
         </motion.div>
 
-        {/* Desktop Image */}
+        {/* ✅ Desktop Image (right side only for lg+) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -123,7 +139,7 @@ const PathPledgeIntro = () => {
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              position: "absolute"
+              position: "absolute",
             }}
           >
             <defs>
