@@ -22,14 +22,14 @@ const DataScienceSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mb-4 text-center md:text-left"
+          className=" text-center md:text-left"
         >
           <h3 className="text-sm font-bold text-[#D9070A] uppercase tracking-wide">
             India&apos;s No. 1 Stock Market Course
           </h3>
           <h2
             id="stock-market-course-heading"
-            className="text-4xl sm:text-4xl md:text-5xl font-extrabold text-gray-800 leading-tight"
+            className="text-4xl sm:text-4xl md:text-4xl font-extrabold text-gray-800 leading-tight"
           >
             Your Trading Success is <br />{" "}
             <span className="text-[#D9070A]">Our Commitment</span>

@@ -103,8 +103,31 @@ export const TestimonialSection = () => {
     ],
   };
 
+  // ✅ JSON-LD Schema for SEO (Reviews)
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "PathPledge Academy Trading Programs",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": testimonials.length,
+    },
+    "review": testimonials.map((item) => ({
+      "@type": "Review",
+      "author": item.name,
+      "reviewBody": item.message,
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5",
+      },
+    })),
+  };
+
   return (
     <section className="bg-gray-100 py-8 px-4 md:px-16">
+      {/* ✅ SEO Optimized Heading */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -112,14 +135,16 @@ export const TestimonialSection = () => {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto text-center mb-8"
       >
-        <h2 className="text-5xl font-extrabold text-gray-800">
-          From Our Student.
+        <h2 className="  text-4xl font-extrabold text-gray-800">
+          Student Reviews & Testimonials | PathPledge Academy
         </h2>
         <p className="text-gray-600 mt-2 text-xl">
-          What our learners say about us
+          Read what our students say about our stock market trading and
+          investment programs.
         </p>
       </motion.div>
 
+      {/* ✅ Testimonial Slider */}
       <Slider {...settings}>
         {testimonials.map((item, index) => (
           <motion.div
@@ -135,7 +160,7 @@ export const TestimonialSection = () => {
                 {item.image ? (
                   <img
                     src={item.image}
-                    alt={item.name}
+                    alt={`${item.name} student testimonial at PathPledge Academy`}
                     className="w-12 h-12 rounded-full object-cover"
                   />
                 ) : (
@@ -159,6 +184,13 @@ export const TestimonialSection = () => {
           </motion.div>
         ))}
       </Slider>
+
+     
+
+      {/* ✅ Inject Schema Markup for SEO */}
+      <script type="application/ld+json">
+        {JSON.stringify(schemaData)}
+      </script>
     </section>
   );
 };

@@ -10,8 +10,34 @@ export const OffshoreStaffSection = () => {
   };
 
   return (
-    <section className="py-14 bg-gray-100">
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+    <section
+      className="py-14 bg-gray-100"
+      id="about-stock-market-training"
+    >
+      {/* ✅ SEO Schema for Video + Academy */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          name: "Best Stock Market Institute in Raipur - PathPledge",
+          description:
+            "Learn trading from PathPledge Academy, Raipur's best stock market learning platform. Covering BSE, NSE, Futures & Options with AI-driven education.",
+          thumbnailUrl: "https://img.youtube.com/vi/n7SuPoRhyzE/maxresdefault.jpg",
+          uploadDate: "2023-01-01",
+          publisher: {
+            "@type": "Organization",
+            name: "PathPledge Academy",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://www.pathpledge.com/logo.png",
+            },
+          },
+          contentUrl: "https://www.pathpledge.com",
+          embedUrl: "https://www.youtube.com/embed/n7SuPoRhyzE",
+        })}
+      </script>
+
+      <div className=" max-w-7xl mx-auto px-6 sm:px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         {/* 🧠 Text Content */}
         <motion.div
@@ -22,13 +48,25 @@ export const OffshoreStaffSection = () => {
           className="space-y-6 text-center md:text-left"
         >
           <span className="text-sm font-bold text-[#D9070A] tracking-wider uppercase block">
-            Who We Are
+            PathPledge Academy-Raipur
           </span>
 
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-800 leading-tight">
-            At PathPledge, we go beyond education,<br />
-            we build elite, data driven market minds.
+          {/* ✅ Keyword Optimized Heading */}
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight">
+            Best Stock Market Training Institute in{" "}
+            <span className="text-[#D9070A]">Raipur</span>
           </h2>
+
+          <p className="text-black text-base md:text-lg leading-relaxed max-w-xl">
+            At <strong>PathPledge Academy Raipur</strong>, we go beyond
+            traditional education  we create{" "}
+            <strong>AI-powered, data-driven trading experts</strong>. Recognized
+            as the <strong>best stock market institute in Raipur</strong>, we
+            specialize in <strong>BSE, NSE, Futures & Options</strong> training
+            with real market exposure. Our mission is to shape{" "}
+            <strong>ethical, consistent, and intelligent retail traders</strong>{" "}
+            across India.
+          </p>
 
           {/* 📱 Mobile-only Video */}
           <motion.div
@@ -42,7 +80,7 @@ export const OffshoreStaffSection = () => {
               <iframe
                 className="w-full aspect-video rounded-xl shadow-xl border-4 border-white"
                 src="https://www.youtube.com/embed/n7SuPoRhyzE"
-                title="PathPledge Video"
+                title="Best Stock Market Training in Raipur - PathPledge"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -50,12 +88,13 @@ export const OffshoreStaffSection = () => {
             </div>
           </motion.div>
 
+          {/* ✅ Feature Points Optimized */}
           <ul className="space-y-3 pt-4 flex flex-col items-center md:items-start">
             {[
-              "India’s first AI-integrated trading education ecosystem.",
-              "Focused on BSE, NSE, Futures & Options, and live market mentoring.",
-              "Backed by real traders, data scientists, and certified mentors.",
-              "Shaping ethical, intelligent, and consistent retail traders.",
+              "India’s first AI-integrated trading education ecosystem in Raipur.",
+              "Focused on BSE, NSE, Futures & Options with live market mentoring.",
+              "Backed by professional traders, certified mentors, and data scientists.",
+              "Transforming beginners into ethical & intelligent retail traders.",
             ].map((point, index) => (
               <li
                 key={index}
@@ -67,12 +106,13 @@ export const OffshoreStaffSection = () => {
             ))}
           </ul>
 
+          {/* ✅ CTA with Keyword */}
           <div className="pt-4 text-center md:text-left">
             <button
               onClick={handleEnquiry}
               className="px-8 py-3 rounded-md text-white font-semibold bg-[#D9070A] shadow-xl hover:bg-black transition-all"
             >
-              Enquiry Now
+              Enquiry for Raipur’s Best Stock Market Academy
             </button>
           </div>
         </motion.div>
@@ -89,7 +129,7 @@ export const OffshoreStaffSection = () => {
             <iframe
               className="w-full h-full aspect-video rounded-xl shadow-xl border-4 border-white"
               src="https://www.youtube.com/embed/n7SuPoRhyzE"
-              title="PathPledge Video"
+              title="Best Stock Market Institute in Raipur - PathPledge"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen

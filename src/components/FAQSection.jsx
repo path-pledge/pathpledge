@@ -1,72 +1,47 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet"; // ✅ SEO Title + Meta
 
+// ✅ FAQ Data with Keywords Optimized
 const faqData = {
   General: [
     {
-      question: "What is PathPledge and what does it offer?",
+      question: "What is PathPledge and why is it the best stock market institute in Raipur?",
       answer:
-        "PathPledge is India’s premier AI-powered stock market training platform that empowers learners to master the art of investing and trading in NSE and BSE. We offer structured online programs that combine technical analysis, fundamental knowledge, risk management, and behavioral finance with modern tools like data science and artificial intelligence. Whether you're a complete beginner or an experienced trader, our goal is to help you trade smarter, reduce losses, and grow long-term wealth.",
+        "PathPledge is India’s premier AI-powered stock market training academy based in Raipur. We help learners master NSE and BSE trading with AI-driven tools, live mentoring, and data-backed strategies. Recognized as the best stock market institute in Raipur, our mission is to guide beginners and professionals towards consistent success.",
     },
     {
-      question: "How is PathPledge different from other online stock market courses?",
+      question: "How is PathPledge different from other stock market courses in India?",
       answer:
-        "Unlike typical theory-driven courses, PathPledge blends real-time market experience with mentor-led sessions, backtesting labs, and AI-based trade setups. We emphasize decision-making, risk-reward understanding, and trading psychology to help you build consistency. Our learners also gain lifetime access to our private community for discussion, trade ideas, and mentorship follow-ups.",
+        "Unlike regular theory-driven courses, PathPledge provides real-time market learning, backtesting labs, and AI-integrated trade setups. We focus on trading psychology, risk management, and consistency. This makes us one of the most trusted institutes for stock market training in India.",
     },
     {
-      question: "Do I need a background in finance to join?",
+      question: "Do I need finance background to join PathPledge in Raipur?",
       answer:
-        "Not at all. PathPledge is designed for everyone—from students and working professionals to full-time traders. Our foundational modules are simple, practical, and jargon-free, with hands-on examples, live doubt support, and case studies. Even if you've never opened a trading account, our beginner path guides you step-by-step from basics to advanced strategies.",
+        "No. Our Raipur-based stock market training programs are designed for students, professionals, and traders. We teach from basics to advanced level in a simple, practical way so anyone can become a confident trader.",
     },
   ],
   Courses: [
     {
-      question: "What topics are covered in your flagship trading course?",
+      question: "What topics are covered in PathPledge’s flagship stock market course in Raipur?",
       answer:
-        "Our flagship program includes: technical analysis, price action, candlestick patterns, support & resistance, intraday and swing strategies, options trading basics, futures contracts, NSE/BSE market structure, risk-reward systems, portfolio building, and data-backed decision-making using indicators and screeners. We also include bonus sessions on algo-trading insights, AI integration, and real case studies.",
+        "Our flagship program includes technical analysis, candlestick patterns, futures & options trading, price action, algo insights, and data-backed strategies. Students also learn NSE/BSE market structure, risk-reward systems, and portfolio building.",
     },
     {
-      question: "Do your courses cover Futures and Options (F&O)?",
+      question: "Does PathPledge cover Futures and Options (F&O) trading?",
       answer:
-        "Yes. We offer dedicated segments that teach you how to trade futures and options confidently in the Indian stock market. You’ll learn how to read open interest, option chain analysis, volatility strategies, Greeks, and common setups for weekly expiry and intraday trades. These are taught live with real charts and backtesting tools.",
-    },
-    {
-      question: "Can I learn at my own pace?",
-      answer:
-        "Absolutely. Our platform is fully online and includes pre-recorded content, downloadable PDFs, quizzes, and live mentoring calls. You can access all content anytime on mobile or desktop. Live classes are recorded too, in case you miss any session.",
+        "Yes. We teach advanced F&O strategies including option chain analysis, Greeks, volatility trading, and expiry day setups with real market examples. This is one reason why PathPledge is considered the best institute for F&O trading in Raipur.",
     },
   ],
   Mentorship: [
     {
-      question: "How does the mentorship process work at PathPledge?",
+      question: "How does mentorship work at PathPledge Raipur?",
       answer:
-        "Every learner gets access to a dedicated mentorship schedule. Our mentors are seasoned traders who provide weekly Zoom classes, homework reviews, portfolio tracking, and personal trading feedback. You can ask doubts, get chart reviews, and join live market analysis sessions. The mentorship also includes one-on-one calls if you need deeper clarification.",
+        "Learners get access to weekly mentor-led Zoom classes, portfolio feedback, live trading sessions, and personal guidance. Our mentors are full-time traders with 5–15+ years of experience.",
     },
     {
-      question: "What qualifications do your mentors have?",
+      question: "Do mentors provide feedback on student trades?",
       answer:
-        "Our mentors are verified full-time traders and market professionals with 5–15+ years of experience across Indian equities, derivatives, and global markets. Some come from fintech, quant, and data science backgrounds. Each mentor is selected based on trading performance, clarity of communication, and coaching expertise.",
-    },
-    {
-      question: "Will I get feedback on my trades?",
-      answer:
-        "Yes! You can submit your trade ideas, journal screenshots, and doubts to mentors through our platform or Discord community. Mentors will give personalized feedback and help you correct patterns that lead to losses. This helps you build consistency and confidence with every trade you take.",
-    },
-  ],
-  Support: [
-    {
-      question: "What if I miss a live class?",
-      answer:
-        "Don’t worry. All sessions are recorded and uploaded within 12 hours. You’ll also receive notes, cheat sheets, and follow-up action steps. You can watch it as many times as you want and ask follow-up questions in the community chat.",
-    },
-    {
-      question: "How do I connect with your team?",
-      answer:
-        "You can email us at 📧 investmentsolutions@pathpledge.in or call us at ☎️ +91-9340210770. We’re available Monday to Saturday, 10 AM to 7 PM. You can also use the contact form on our website or DM us on Instagram @pathpledge.",
-    },
-    {
-      question: "Do you offer any free orientation or demo sessions?",
-      answer:
-        "Yes. We frequently organize free webinars and trial classes for those who want to experience our teaching style. You’ll get to attend a real session, see mentor interaction, and understand the learning structure before enrolling.",
+        "Yes! Students submit trade journals and get personalized mentor feedback. This helps identify mistakes, reduce losses, and build long-term consistency.",
     },
   ],
 };
@@ -78,12 +53,35 @@ export const FAQSection = () => {
 
   return (
     <section className="bg-gray-100 py-16 px-4 sm:px-6 lg:px-20 text-center">
+      {/* ✅ SEO META */}
+      <Helmet>
+        <title>FAQs - Best Stock Market Training in Raipur | PathPledge</title>
+        <meta
+          name="description"
+          content="Find answers to FAQs about PathPledge - the best stock market institute in Raipur. Learn about NSE, BSE, Futures & Options, AI-powered trading, and mentorship programs."
+        />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqData.General.concat(faqData.Courses, faqData.Mentorship).map((faq) => ({
+              "@type": "Question",
+              "name": faq.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer,
+              },
+            })),
+          })}
+        </script>
+      </Helmet>
+
       {/* Heading */}
       <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-gray-800 leading-tight">
-        Frequently Asked Questions
+        FAQs About Stock Market Training in Raipur
       </h2>
       <p className="text-gray-600 text-base sm:text-lg mb-10">
-        Have Questions About Trading? We’re Here to Help.
+        Have questions about India’s best stock market courses? PathPledge Raipur is here to guide you.
       </p>
 
       {/* Category Tabs */}
@@ -133,7 +131,7 @@ export const FAQSection = () => {
       {/* CTA Buttons */}
       <div className="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a
-          href="https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20have%20a%20question%20regarding%20your%20courses."
+          href="https://wa.me/918827240770?text=Hi%20PathPledge%2C%20I%20want%20to%20know%20about%20Raipur%20stock%20market%20courses."
           target="_blank"
           rel="noopener noreferrer"
           className="px-8 py-3 rounded-md font-bold text-white bg-[#D9070A] shadow-xl hover:bg-gray-900 transition"
@@ -142,13 +140,13 @@ export const FAQSection = () => {
         </a>
 
         <a
-  href="https://www.youtube.com/watch?v=n7SuPoRhyzE"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-8 py-3 rounded-md font-bold text-white bg-[#D9070A] shadow-xl hover:bg-gray-900 transition"
->
-  Free Demo
-</a>
+          href="https://www.youtube.com/watch?v=n7SuPoRhyzE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="px-8 py-3 rounded-md font-bold text-white bg-[#D9070A] shadow-xl hover:bg-gray-900 transition"
+        >
+          Free Demo
+        </a>
       </div>
     </section>
   );
