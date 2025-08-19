@@ -39,6 +39,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/">
           <div className="text-4xl font-bold bg-gradient-to-r from-[#D9070A] to-[#ff9900] text-transparent bg-clip-text animate-pulse cursor-pointer">
+            {/* <img src="/path/to/logo.png" alt="PathPledge Logo" className="inline-block w-12 h-12 mr-2" /> */}
             PathPledge
           </div>
         </Link>
