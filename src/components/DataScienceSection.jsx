@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import promoImg3 from "../assets/t1.png";
+import promoImg3 from "../assets/t2.jpg";
 
 const DataScienceSection = () => {
   const navigate = useNavigate();

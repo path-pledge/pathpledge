@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import heroImg from "../assets/h111.png";
-import bgImg from "../assets/C11.jpg";
+import heroImg from "../assets/h222.png";
+import bgImg from "../assets/Hero1.jpg";
 import { motion } from "framer-motion";
 
 const WelcomeHero = () => {
@@ -65,20 +65,20 @@ const WelcomeHero = () => {
         </script>
       </Helmet>
 
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-18 md:py-18  overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-6 md:py-2  overflow-hidden">
         <img
           src={bgImg}
           alt="Stock market institute in Raipur background"
           className="absolute inset-0 w-full h-full object-cover opacity-90 blur-sm scale-110 z-0"
         />
 
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-20" />
 
         <div className="relative z-20 flex flex-col items-center text-center max-w-4xl">
           <motion.img
             src={heroImg}
             alt="Best trading courses in Raipur-Live market training"
-            className="w-[85%] sm:w-[40%] md:w-[70%] lg:w-[60%] max-w-3xl object-contain mt-14 sm:mt-14"
+            className="w-[80%] sm:w-[80%] md:w-[70%] lg:w-[60%] max-w-3xl object-contain mt-10 sm:mt-8"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -90,7 +90,7 @@ const WelcomeHero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-             Level Up Your Trading Game-Live Market Practice, Proven Techniques, Real Impact.
+             Level Up <span className="text-[#d9070a]">Your Trading </span>Game-Live Market Practice, Proven Techniques, Real Impact.
           </motion.h1>
 
           <motion.button
