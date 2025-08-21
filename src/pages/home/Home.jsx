@@ -1,6 +1,6 @@
 import React from 'react'
 
-import HeroSlider from '../../components/HeroSlider'; 
+
 import Features from '../../components/Features';
 import DataScienceSection from '../../components/DataScienceSection';
 import WhyChooseUs from '../../components/WhyChooseUs';
@@ -10,11 +10,12 @@ import { BrochureDownloadSection } from '../../components/BrochureDownloadSectio
 import Leader from '../../components/Leader';
 import PhasesInPhone from '../../components/PhasesInPhone';
 import { TestimonialSection } from '../../components/TestimonialSection';
+import WelcomeHero from '../../components/WelcomeHero';
 
 const Home = () => {
   return (
     <div className="mt-25">
-      <HeroSlider />
+      <WelcomeHero />
       <Features />
       <PhasesInPhone />
       <DataScienceSection />

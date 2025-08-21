@@ -73,7 +73,7 @@ const HeroSlider = () => {
       speed={1200}
       pagination={{ clickable: true }}
       autoplay={{
-        delay: 4000,
+        delay: 6000,
         disableOnInteraction: false,
         reverseDirection: false,
       }}

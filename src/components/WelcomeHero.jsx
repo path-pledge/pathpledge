@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { useNavigate } from "react-router-dom";
-import heroImg from "../assets/h222.png";
-import bgImg from "../assets/Hero1.jpg";
+import heroImg from "../assets/h111.png";
+import bgImg from "../assets/C11.jpg";
 import { motion } from "framer-motion";
 
 const WelcomeHero = () => {
