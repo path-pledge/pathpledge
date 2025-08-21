@@ -65,15 +65,18 @@ const WelcomeHero = () => {
         </script>
       </Helmet>
 
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-6 md:py-2  overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 py-6 md:py-2 overflow-hidden">
+        {/* ✅ Background Image - blur hata diya */}
         <img
           src={bgImg}
           alt="Stock market institute in Raipur background"
-          className="absolute inset-0 w-full h-full object-cover opacity-90 blur-sm scale-110 z-0"
+          className="absolute inset-0 w-full h-full object-cover opacity-90 scale-110 z-0"
         />
 
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-sm z-20" />
+        {/* ✅ Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/50 z-10" />
 
+        {/* ✅ Hero Content */}
         <div className="relative z-20 flex flex-col items-center text-center max-w-4xl">
           <motion.img
             src={heroImg}
@@ -85,12 +88,13 @@ const WelcomeHero = () => {
           />
 
           <motion.h1
-            className="text-3xl  sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight px-2"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-             Level Up <span className="text-[#d9070a]">Your Trading </span>Game-Live Market Practice, Proven Techniques, Real Impact.
+            Level Up <span className="text-[#d9070a]">Your Trading </span>
+            Game - Live Market Practice, Proven Techniques, Real Impact.
           </motion.h1>
 
           <motion.button
