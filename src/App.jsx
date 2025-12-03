@@ -6,6 +6,7 @@ import Pricing from "./pages/pricing/Pricing";
 import Contact from "./pages/contact/Contact";
 import Leaderboard from "./pages/leaderboard/Leaderboard"; 
 import Error from "./pages/error/Error";
+import Policies from "./pages/policies/Policies";
 import WhatsAppFloatingButton from "./components/WhatsAppFloatingButton";
 import LandingPage from "./pages/landing/LandingPage"; 
 import ScrollToTop from "./components/ScrollToTop";
@@ -22,6 +23,7 @@ function App() {
           <Route path="pricing" element={<Pricing />} />
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="policies" element={<Policies />} />
           <Route path="error" element={<Error />} /> 
         </Route>
           <Route path="/promo-offer" element={<LandingPage />} /> 

@@ -13,6 +13,7 @@ import {
   Mail,
   PhoneCall,
   MapPin,
+  FileText,
 } from "lucide-react";
 import logo from "../assets/logo.png";
 
@@ -41,6 +42,7 @@ const Footer = () => {
     { name: "Pricing", icon: IndianRupee, link: "/pricing" },
     { name: "Our Mentors", icon: UserCheck, link: "/leaderboard" },
     { name: "Contact", icon: Mail, link: "/contact" },
+    { name: "Refund & Payment Policy", icon: FileText, link: "/policies" },
   ];
 
   const socialLinks = [
@@ -176,7 +178,6 @@ const Footer = () => {
       <div className="border-t border-gray-600 mt-12">
         <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center text-white text-sm font-serif">
           <span>© {new Date().getFullYear()} PathPledge. All Rights Reserved.</span>
-          
         </div>
       </div>
     </footer>
